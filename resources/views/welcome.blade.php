@@ -1,5 +1,19 @@
 @extends('layouts.main')
 @section('content')
+    <div class="container py-3">
+        <header>
+
+            @extends("layouts.home-navigation")
+        </header>
+
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">EpiCrm</h1>
+            <p class="fs-5 text-muted">
+                Découvrez EpiCrm le logiciel qui bonifie votre processus de prospection commerciale.
+                Pensé pour aider les équipes commerciales à suivre leurs prospects et conclure leurs ventes sans perdre de temps en saisies inutiles.
+            </p>
+        </div>
+
         <main>
             <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
                 <div class="col">
