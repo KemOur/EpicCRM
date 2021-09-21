@@ -1,26 +1,24 @@
 @extends('layouts.main')
 @section('content')
-    <div class="container py-3">
-
+    <div class="container">
     <x-app-layout>
+
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Espace de travail') }}
         </h2>
     </x-slot>
-
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     @if (auth()->check() && auth()->user()->id)
-                        <h5>Vous êtes connecté {{auth()->user()->name}} !</h5>
+                        <h5>Espace de travail {{auth()->user()->name}}</h5>
                     @else
                     @endif
                 </div>
             </div>
-
 
             <main class="container">
                 <div class="row mb-3">
@@ -278,8 +276,6 @@
             </main>
         </div>
     </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
 </x-app-layout>
 
 @endsection

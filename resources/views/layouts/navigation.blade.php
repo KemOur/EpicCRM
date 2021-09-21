@@ -8,7 +8,6 @@
                         <div class="flex-shrink-0 flex items-center">
                             <a href="{{ route('dashboard') }}">
                                 <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
-                                <small>logo EpicCRM</small>
                             </a>
                         </div>
 
@@ -34,7 +33,7 @@
 
                     <!--Notification -->
                     <div>
-                        <button type="button" class="btn btn-outline-dark">Opportunité</button>
+                        <button type="button" class="btn btn-outline-dark">Ajouter</button>
                     </div>
 
                     <!--Notification -->
@@ -90,22 +89,21 @@
                     <div class="flex-shrink-0 flex items-center">
                         <a href="{{ route('dashboard') }}">
                             <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
-                            <small>logo EpicCRM</small>
                         </a>
                     </div>
 
                     <!-- Navigation Links -->
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" style="text-decoration: none;">
                             {{ __('Fonctionnalités') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" style="text-decoration: none;">
                             {{ __('Tarif') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" style="text-decoration: none;">
                             {{ __('À propos') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('login')" :active="request()->routeIs('dashboard')">
+                        <x-nav-link :href="route('login')" :active="request()->routeIs('dashboard')" style="text-decoration: none;">
                             {{ __('connexion') }}
                         </x-nav-link>
                     </div>
