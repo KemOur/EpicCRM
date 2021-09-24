@@ -15,7 +15,7 @@
             <h5>Resources</h5>
             <ul class="list-unstyled text-small">
                 <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Conditions d'utilisation</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Comment organiser le suivi de ses clients</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Suivi de ses clients</a></li>
             </ul>
         </div>
         <div class="col-6 col-md">

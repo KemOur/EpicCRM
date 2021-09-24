@@ -2,7 +2,6 @@
 @section('content')
     <div class="container">
     <x-app-layout>
-
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Espace de travail') }}
@@ -39,7 +38,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 1</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 1</span>
                                 </div>
@@ -51,7 +50,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 2</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 2</span>
                                 </div>
@@ -63,7 +62,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 3</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 3</span>
                                 </div>
@@ -75,7 +74,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 2</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 2</span>
                                 </div>
@@ -87,7 +86,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 3</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 3</span>
                                 </div>
@@ -99,7 +98,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 2</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 2</span>
                                 </div>
@@ -111,7 +110,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 3</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 3</span>
                                 </div>
@@ -140,7 +139,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 1</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 1</span>
                                 </div>
@@ -151,7 +150,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 2</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 2</span>
                                 </div>
@@ -162,7 +161,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 3</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 3</span>
                                 </div>
@@ -190,7 +189,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 1</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 1</span>
                                 </div>
@@ -201,7 +200,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 2</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 2</span>
                                 </div>
@@ -212,7 +211,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 3</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 3</span>
                                 </div>
@@ -240,7 +239,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 1</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 1</span>
                                 </div>
@@ -251,7 +250,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 2</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 2</span>
                                 </div>
@@ -262,7 +261,7 @@
                                 <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                     <div class="d-flex justify-content-between">
                                         <strong class="text-gray-dark">Prosps 3</strong>
-                                        <a href="#">Follow</a>
+                                        <a href="#">action</a>
                                     </div>
                                     <span class="d-block">formation 3</span>
                                 </div>
