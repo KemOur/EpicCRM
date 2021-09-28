@@ -5,83 +5,137 @@
             @extends("layouts.navigation")
         </header>
         <main>
-                <h2 style="text-align: center; margin: 30px; font-family: Roboto;">
+                <h2 style="text-align: center; margin-top: 30px; font-family: Roboto;">
                     Un tarif qui s'adapte
                 </h2>
 
-                <h4 style="text-align: center; margin: 10px; font-family: Roboto;">
+                <h5 style="text-align: center; margin-top: 10px; font-family: Roboto;">
                     Boostez vos ventes quelle que soit la taille de vos équipes.
-                </h4>
+                </h5>
 
-                <p style="text-align: center; margin: 25px; font-family: Roboto;">
-                    Toutes les éditions de EpicCRM sont conformes au RGPD.
-                </p>
+                <p style="text-align: center; margin-top: 5px; font-family: Roboto;">
+                    Toutes les éditions de EpicCRM sont conformes au RGPD. <small>Paiement mensuel sans engagement</small>
+                </p><br>
 
             <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm">
-                        <div class="card-header py-3">
+                        <div class="card-header py-3 text-white bg-info border-info">
                             <h4 class="my-0 fw-normal">Débutant</h4>
                         </div>
                         <div class="card-body">
                             <h1 class="card-title pricing-card-title">8€<small class="text-muted fw-light">/mois</small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li style="position: center"> Création d’opportunités</li>
-                                <li style="position: center"> Amélioration et suivie de la performance</li>
-                                <li style="position: center"> Rappels d’activités</li>
-                            </ul>
+                            <p>
+                                Abandonnez votre tableur et commencez à gérer vos leads plus efficacement.
+                            </p>
+
                             <button type="button" class="w-100 btn btn-lg btn-outline-info">Test gratuit</button>
+                            <hr>
+                            <small><strong>Création rapide d’opportunités :</strong></small>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Intégration au formulaire</li>
+                                <li class="list-group-item">Import de fichier Excel & CSV</li>
+                            </ul>
+                            <small><strong>Améliorer la performance des ventes :</strong></small>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Prioritisation des leads</li>
+                                <li class="list-group-item">Classification par catégories</li>
+                                <li class="list-group-item">Import de fichiers de prospection</li>
+                            </ul>
+                            <small><strong>Support client et formation :</strong></small>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Support par email et téléphone - Réponse dans les 24h (email)</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm">
-                        <div class="card-header py-3">
+                        <div class="card-header py-3 text-white bg-info border-info">
                             <h4 class="my-0 fw-normal">Pro</h4>
                         </div>
                         <div class="card-body">
                             <h1 class="card-title pricing-card-title">20€<small class="text-muted fw-light">/mois</small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li style="position: center"> Création d’opportunités</li>
-                                <li style="position: center"> Amélioration et suivie de la performance</li>
-                                <li style="position: center"> Rappels d’activités</li>
-                            </ul>
+                            <p>
+                                Rendez votre processus commercial plus efficace de la prospection au closing.
+                            </p>
                             <button type="button" class="w-100 btn btn-lg btn-info" style="color: #ffffff">Test gratuit</button>
+                            <hr>
+                            <small><strong>Création rapide d’opportunités :</strong></small>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Intégration au formulaire</li>
+                                <li class="list-group-item">Import de fichier Excel & CSV</li>
+                            </ul>
+                            <small><strong>Suivi de l’activité commerciale :</strong></small>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Paramétrage des activités commerciales (rdv, appel, email, ...)</li>
+                                <li class="list-group-item">Rapports des actions commerciales</li>
+                            </ul>
+                            <small><strong>Gestion de processus après-vente :</strong></small>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Création de listes de tâches</li>
+                                <li class="list-group-item">Rappels automatique des tâches</li>
+                                <li class="list-group-item">Assignation des tâches après-vente</li>
+                            </ul>
+                            <small><strong>Support client et formation :</strong></small>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Support par email et téléphone - Réponse en moins de 2 heures (heures de bureau).</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm border-info">
-                        <div class="card-header py-3 text-white bg-info border-primary">
+                        <div class="card-header py-3 text-white bg-info border-info">
                             <h4 class="my-0 fw-normal">Enterprise</h4>
                         </div>
                         <div class="card-body">
                             <h1 class="card-title pricing-card-title">30€<small class="text-muted fw-light">/mois</small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li style="position: center"> Création d’opportunités</li>
-                                <li style="position: center"> Amélioration et suivie de la performance</li>
-                                <li style="position: center"> Rappels d’activités</li>
-                            </ul>
+                            <p>
+                                Boostez votre stratégie commerciale, organisez votre équipe et augmentez vos revenus.
+                            </p>
                             <button type="button" class="w-100 btn btn-lg btn-info" style="color: #ffffff">Test gratuit</button>
+                            <hr>
+                            <small><strong>Suivi de l’activité commerciale :</strong></small>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Paramétrage des activités commerciales (rdv, appel, email, ...)</li>
+                                <li class="list-group-item">Rapports des actions commerciales</li>
+                            </ul>
+                            <small><strong>Gestion de processus après-vente :</strong></small>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Création de listes de tâches</li>
+                                <li class="list-group-item">Rappels automatique des tâches</li>
+                                <li class="list-group-item">Assignation des tâches après-vente</li>
+                            </ul>
+                            <small><strong>Gestion des équipes :</strong></small>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Création et gestion des équipes</li>
+                                <li class="list-group-item">Suivi des objectifs des commerciaux</li>
+                                <li class="list-group-item">Assignation des prospects</li>
+                            </ul>
+                            <small><strong>Support client et formation :</strong></small>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Support par email et téléphone - Réponse en moins de 2 heures (heures de bureau).</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
             <br>
             <br>
-            <h2 style="text-align: center; font-family: Roboto;"> Accompagnement Premium en ligne </h2>
-            <h3 style="text-align: center; font-family: Roboto;"> À partir de 900€ </h3>
-            <div class="centerBtn" style="display: flex; justify-content: center; align-items: center;">
-                 <button type="button" class="w-47 btn btn-lg btn-outline-info" style="text-align: center; margin: 20px;">Test gratuit</button>
+            <div class="bg-light p-5 rounded mt-3">
+                <h2>Accompagnement Premium en ligne à partir de 900€ </h2>
+                <p class="lead">Cette offre est divisée en 4 étapes : Analyse, Formation, Livrables et Suivi Client.</p>
+                <a class="w-30 btn btn-lg btn-outline-info" href="/docs/5.1/components/navbar/" role="button">Contactez-nous »</a>
             </div>
-
+            <br>
             <p style="text-align: center;">
-                Cette offre est divisée en 4 étapes : Analyse, Formation, Livrables et Suivi Client. Ces différentes étapes nous permettront de vous fournir un accompagnement au démarrage personnalisé afin que vous et votre équipe soyez totalement prêts à utiliser noCRM. Nous nous assurerons également que votre compte est bien configuré afin que chaque nouvel utilisateur s'approprie facilement noCRM et atteigne encore plus rapidement ses objectifs commerciaux.
+                Cette offre est divisée en 4 étapes : Analyse, Formation, Livrables et Suivi Client. Ces différentes étapes nous permettront de vous fournir un accompagnement au démarrage personnalisé afin que vous et votre équipe soyez totalement prêts à utiliser EpicCRM.
+                <hr>Nous nous assurerons également que votre compte est bien configuré afin que chaque nouvel utilisateur s'approprie facilement noCRM et atteigne encore plus rapidement ses objectifs commerciaux.
             </p>
             <br>
-
-            <div class="row text-center" style="margin: 20px;">
+            <br>
+            <div class="row text-center">
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm">
                         <div class="card-header py-3">
@@ -141,6 +195,15 @@
                                 Document d’onboarding adapté à vos besoins.
                             </p>
                         </div>
+                    </div>
+                </div>
+
+                <div>
+                    <br>
+                    <br>
+                    <div class="bg-light p-5 rounded mt-3">
+                        <h6>Formation des Administrateurs à l'usage de noCRM et à la gestion du compte : équipes, reporting, personnalisation. </h6>
+                        <a class="w-30 btn btn-lg btn-outline-info" href="/docs/5.1/components/navbar/" role="button">Démarrer votre test gratuit »</a>
                     </div>
                 </div>
             </div>

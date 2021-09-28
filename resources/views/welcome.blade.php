@@ -14,11 +14,11 @@
                 <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
                     <div class="col">
                         <div class="card mb-4 rounded-3 shadow-sm">
-                            <div class="card-header py-3">
+                            <div class="card-header py-3 text-white bg-info border-info">
                                 <h4 class="my-0 fw-normal">Débutant</h4>
                             </div>
                             <div class="card-body">
-                                <h1 class="card-title pricing-card-title">8€<small class="text-muted fw-light">/mois</small></h1>
+                                <h1 class="card-title pricing-card-title">10€<small class="text-muted fw-light">/mois</small></h1>
                                 <ul class="list-unstyled mt-3 mb-4">
                                     <li style="position: center"> Création d’opportunités</li>
                                     <li style="position: center"> Amélioration et suivie de la performance</li>
@@ -30,8 +30,8 @@
                     </div>
                     <div class="col">
                         <div class="card mb-4 rounded-3 shadow-sm">
-                            <div class="card-header py-3">
-                                <h4 class="my-0 fw-normal">Pro</h4>
+                            <div class="card-header py-3 text-white bg-info border-info">
+                                <h4 class="my-0 fw-normal ">Pro</h4>
                             </div>
                             <div class="card-body">
                                 <h1 class="card-title pricing-card-title">20€<small class="text-muted fw-light">/mois</small></h1>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="col">
                         <div class="card mb-4 rounded-3 shadow-sm border-info">
-                            <div class="card-header py-3 text-white bg-info border-primary">
+                            <div class="card-header py-3 text-white bg-info border-info">
                                 <h4 class="my-0 fw-normal">Enterprise</h4>
                             </div>
                             <div class="card-body">
