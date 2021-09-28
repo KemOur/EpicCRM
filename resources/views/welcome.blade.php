@@ -6,9 +6,9 @@
         </header>
             <main>
                 <div class="">
-                    <h5 style="text-align: center; margin: 35px; font-size: 2.5rem; font-family: Roboto;">
+                    <p style="text-align: center; margin: 35px; font-size: 2rem; font-family: Roboto;">
                         La plateforme CRM simple à utiliser
-                    </h5>
+                    </p>
                 </div>
 
                 <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
@@ -66,7 +66,7 @@
                 <hr>
                 <div class="container px-4 py-5" id="icon-grid">
                     <div>
-                        <h5 style="text-align: center; font-size: 1.5rem;">
+                        <h5 style="text-align: center; font-size: 1rem;">
                             Les fonctionnalités dont vos commerciaux ont réellement besoin !
                         </h5>
                     </div><br><br>

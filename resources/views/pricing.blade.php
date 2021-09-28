@@ -5,9 +5,9 @@
             @extends("layouts.navigation")
         </header>
         <main>
-                <h2 style="text-align: center; margin-top: 30px; font-family: Roboto;">
+                <h3 style="text-align: center; margin-top: 30px; font-family: Roboto;">
                     Un tarif qui s'adapte
-                </h2>
+                </h3>
 
                 <h5 style="text-align: center; margin-top: 10px; font-family: Roboto;">
                     Boostez vos ventes quelle que soit la taille de vos équipes.
@@ -124,7 +124,7 @@
             <br>
             <br>
             <div class="bg-light p-5 rounded mt-3">
-                <h2>Accompagnement Premium en ligne à partir de 900€ </h2>
+                <h5>Accompagnement Premium en ligne à partir de 900€ </h5>
                 <p class="lead">Cette offre est divisée en 4 étapes : Analyse, Formation, Livrables et Suivi Client.</p>
                 <a class="w-30 btn btn-lg btn-outline-info" href="/docs/5.1/components/navbar/" role="button">Contactez-nous »</a>
             </div>
@@ -142,7 +142,7 @@
                             <h4 class="my-0 fw-normal">1</h4>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title pricing-card-title">Analyse</h3>
+                            <h5 class="card-title pricing-card-title">Analyse</h5>
                           <p>
                               Analyse des problématiques rencontrées et personnalisation du compte en fonction des besoins de votre entreprise.
                           </p>
@@ -156,7 +156,7 @@
                             <h4 class="my-0 fw-normal">2</h4>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title pricing-card-title">Formation</h3>
+                            <h5 class="card-title pricing-card-title">Formation</h5>
                             <p>
                              Formation des Administrateurs à l'usage de noCRM et à la gestion du compte : équipes, reporting, personnalisation.
                              <hr>
@@ -172,7 +172,7 @@
                             <h4 class="my-0 fw-normal">3</h4>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title pricing-card-title">Livrables</h3>
+                            <h5 class="card-title pricing-card-title">Livrables</h5>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li style="position: center"> Création d’opportunités</li>
                                 <li style="position: center"> Amélioration et suivie de la performance</li>
@@ -188,7 +188,7 @@
                             <h4 class="my-0 fw-normal">4</h4>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title pricing-card-title">Suivre</h3>
+                            <h5 class="card-title pricing-card-title">Suivre</h5>
                             <p>
                                 Enregistrements édités des formations, pour que vous puissiez les partager avec votre équipe.
                                 <hr>
