@@ -22,8 +22,12 @@ Route::get('/about', function () { return view('about');});
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/dashboard', function () { return view('dashboard'); })->name('dashboard');
-    //Route::get('/dashboard/todo', function () { return view('todo'); })->middleware(['auth'])->name('dashboard');
+    /*Route::get('/dashboard/todo', function () { return view('todo'); })->middleware(['auth'])->name('dashboard');*/
     Route::get('/dashboard',  [\App\Http\Controllers\CommercialController::class, 'index'])->name('commercial.dashboard');
+    Route::get('/dashboard/todo',  [\App\Http\Controllers\TodoController::class, 'index'])->name('commercial.todo');
+    Route::get('/dashboard/do',  [\App\Http\Controllers\DoController::class, 'index'])->name('commercial.do');
+    Route::get('/dashboard/tocall',  [\App\Http\Controllers\TocallController::class, 'index'])->name('commercial.tocall');
+    Route::get('/dashboard/lost',  [\App\Http\Controllers\LostController::class, 'index'])->name('commercial.lost');
 
 });
 
