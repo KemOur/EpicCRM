@@ -24,7 +24,8 @@
                     <div class="col-md-3 themed-grid-col">
                         <div class="my-3 p-3 bg-body rounded shadow-sm">
                             <h6 class="border-bottom pb-2 mb-0">
-                                Entrant
+                                À faire
+                                <hr class="bg-info">
                                 <br>
                                 <br>
                                 <div class="d-flex justify-content-between">
@@ -125,7 +126,8 @@
                     <div class="col-md-3 themed-grid-col">
                         <div class="my-3 p-3 bg-body rounded shadow-sm">
                             <h6 class="border-bottom pb-2 mb-0">
-                                Qualifié
+                                Gagné
+                                <hr class="bg-success">
                                 <br>
                                 <br>
                                 <div class="d-flex justify-content-between">
@@ -175,7 +177,8 @@
                     <div class="col-md-3 themed-grid-col">
                         <div class="my-3 p-3 bg-body rounded shadow-sm">
                             <h6 class="border-bottom pb-2 mb-0">
-                                Rendez-vous fait
+                                À rappeler
+                                <hr class="bg-warning">
                                 <br>
                                 <br>
                                 <div class="d-flex justify-content-between">
@@ -225,7 +228,8 @@
                     <div class="col-md-3 themed-grid-col">
                         <div class="my-3 p-3 bg-body rounded shadow-sm">
                             <h6 class="border-bottom pb-2 mb-0">
-                                Devis envoyé
+                                Perdu
+                                <hr class="bg-danger">
                                 <br>
                                 <br>
                                 <div class="d-flex justify-content-between">

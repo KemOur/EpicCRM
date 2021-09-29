@@ -25,8 +25,76 @@
                         Le CRM en tant que processus : système adopté par une entreprise pour développer et gérer ces relations.
                     </p>
                 </div>
+                <hr>
+
+                <div class="container-fluid py-5">
+                    <h3> Les avantages du CRM  : </h3>
+                    <div>
+                        <ol>
+                            <li>1. Gestion des contacts améliorée</li>
+                            <li>2. Collaboration entre équipes</li>
+                            <li>3. Productivité accrue</li>
+                            <li>4. Gestion des ventes dynamisée</li>
+                            <li>5. Prévision des ventes précise</li>
+                            <li>6. Reporting fiable</li>
+                            <li>7. Indicateurs commerciaux optimisés</li>
+                            <li>8. Meilleure satisfaction et fidélisation des clients</li>
+                            <li>9. Retour sur investissement marketing plus rentable</li>
+                            <li>10. Meilleurs produits et services</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="container px-4 py-5" id="featured-3">
+                    <h2 class="pb-2 border-bottom">Nos clients</h2>
+                    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                        <div class="feature col">
+                            <div class="feature-icon bg-info bg-gradient">
+                                <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
+                            </div>
+                            <h2 class="my-4 h4">Simple, rapide, intuitif</h2>
+                            <p>"Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words."</p>
+                        </div>
+                        <div class="feature col">
+                            <div class="feature-icon bg-info bg-gradient">
+                                <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
+                            </div>
+                            <h2 class="my-4 h4">Une valeur sûre !</h2>
+                            <p>"Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words."</p>
+                        </div>
+                        <div class="feature col">
+                            <div class="feature-icon bg-info bg-gradient">
+                                <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+                            </div>
+                            <h2 class="my-4 h4">Un CRM efficace</h2>
+                            <p>"Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words."</p>
+                        </div>
+                    </div>
+                    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                        <div class="feature col">
+                            <div class="feature-icon bg-info bg-gradient">
+                                <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
+                            </div>
+                            <h2 class="my-4 h4">Trés facile d'utilisation</h2>
+                            <p>"Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words."</p>
+                        </div>
+                        <div class="feature col">
+                            <div class="feature-icon bg-info bg-gradient">
+                                <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
+                            </div>
+                            <h2 class="my-4 h4">Un CRM intuitif</h2>
+                            <p>"Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words."</p>
+                        </div>
+                        <div class="feature col">
+                            <div class="feature-icon bg-info bg-gradient">
+                                <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+                            </div>
+                            <h2 class="my-4 h4">Puissance, simplicité</h2>
+                            <p>"Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words."</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
-
 @endsection

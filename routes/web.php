@@ -18,8 +18,13 @@ Route::get('/features', function () { return view('features');});
 Route::get('/pricing', function () { return view('pricing');});
 Route::get('/about', function () { return view('about');});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+/*Route::get('/dashboard', function () { return view('dashboard'); })->middleware(['auth'])->name('dashboard');*/
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/dashboard', function () { return view('dashboard'); })->name('dashboard');
+    //Route::get('/dashboard/todo', function () { return view('todo'); })->middleware(['auth'])->name('dashboard');
+    Route::get('/dashboard',  [\App\Http\Controllers\CommercialController::class, 'index'])->name('commercial.dashboard');
+
+});
 
 require __DIR__.'/auth.php';

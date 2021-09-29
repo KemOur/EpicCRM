@@ -129,10 +129,15 @@
                 <a class="w-30 btn btn-lg btn-outline-info" href="/docs/5.1/components/navbar/" role="button">Contactez-nous »</a>
             </div>
             <br>
-            <p style="text-align: center;">
+
+            <div>
+            <small style="text-align: center;">
                 Cette offre est divisée en 4 étapes : Analyse, Formation, Livrables et Suivi Client. Ces différentes étapes nous permettront de vous fournir un accompagnement au démarrage personnalisé afin que vous et votre équipe soyez totalement prêts à utiliser EpicCRM.
-                <hr>Nous nous assurerons également que votre compte est bien configuré afin que chaque nouvel utilisateur s'approprie facilement noCRM et atteigne encore plus rapidement ses objectifs commerciaux.
-            </p>
+                <hr>
+                Nous nous assurerons également que votre compte est bien configuré afin que chaque nouvel utilisateur s'approprie facilement noCRM et atteigne encore plus rapidement ses objectifs commerciaux.
+            </small>
+            </div>
+
             <br>
             <br>
             <div class="row text-center">
@@ -202,7 +207,7 @@
                     <br>
                     <br>
                     <div class="bg-light p-5 rounded mt-3">
-                        <h6>Formation des Administrateurs à l'usage de noCRM et à la gestion du compte : équipes, reporting, personnalisation. </h6>
+                        <h6>Formation des Administrateurs à l'usage de noCRM et à la gestion du compte : équipes, reporting, personnalisation. </h6><br>
                         <a class="w-30 btn btn-lg btn-outline-info" href="/docs/5.1/components/navbar/" role="button">Démarrer votre test gratuit »</a>
                     </div>
                 </div>
