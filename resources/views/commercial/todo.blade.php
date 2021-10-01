@@ -23,7 +23,7 @@
                                  </a>
                                  <div>
                                      @if (auth()->check() && auth()->user()->id)
-                                         <h5>Espace de travail {{auth()->user()->name}}</h5>
+                                         <h5>Espace de travail {{auth()->user()->firstname}}</h5>
                                      @else
                                      @endif
                                  </div>
@@ -51,12 +51,32 @@
                                         </div>
                                     </h6>
 
+
+
+
+                                    <div class="d-flex text-muted pt-3">
+                                        <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                                            <div class="d-flex justify-content-between">
+                                                <p class="text-gray-dark">Noms et prénoms</p>
+                                                <div> <span class="d-block">Adresse email:</span> </div>
+                                                <div> <span class="d-block">N° Téléphone:</span> </div>
+
+                                                <div style="width: 18vh">
+                                                    <h5>Status:</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="d-flex text-muted pt-3">
                                         <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"> <rect width="100%" height="100%" fill="#52cbf0"></rect></svg>
                                         <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                             <div class="d-flex justify-content-between">
                                                 <strong class="text-gray-dark">Junior PECPEC</strong>
-                                                <div style="width: 130px">
+                                                <div> <span class="d-block">juniorpecpec@gmail.com</span> </div>
+                                                <div> <span class="d-block">0102030405</span> </div>
+
+                                                <div style="width: 18vh">
                                                     <select class="form-select form-select-sm" aria-label="Default select example">
                                                         <option selected>Sélectionner</option>
                                                         <option value="1">Gagné</option>
@@ -65,16 +85,20 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <span class="d-block">juniorpecpec@gmail.com</span>
-                                            <span class="d-block">0102030405</span>
                                         </div>
                                     </div>
+
+
+
                                     <div class="d-flex text-muted pt-3">
                                         <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"> <rect width="100%" height="100%" fill="#52cbf0"></rect></svg>
                                         <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                             <div class="d-flex justify-content-between">
                                                 <strong class="text-gray-dark">Junior PECPEC</strong>
-                                                <div style="width: 130px">
+                                                <div> <span class="d-block">juniorpecpec@gmail.com</span> </div>
+                                                <div> <span class="d-block">0102030405</span> </div>
+
+                                                <div style="width: 18vh">
                                                     <select class="form-select form-select-sm" aria-label="Default select example">
                                                         <option selected>Sélectionner</option>
                                                         <option value="1">Gagné</option>
@@ -83,16 +107,20 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <span class="d-block">juniorpecpec@gmail.com</span>
-                                            <span class="d-block">0102030405</span>
                                         </div>
                                     </div>
+
+
+
                                     <div class="d-flex text-muted pt-3">
                                         <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"> <rect width="100%" height="100%" fill="#52cbf0"></rect></svg>
                                         <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                             <div class="d-flex justify-content-between">
                                                 <strong class="text-gray-dark">Junior PECPEC</strong>
-                                                <div style="width: 130px">
+                                                <div> <span class="d-block">juniorpecpec@gmail.com</span> </div>
+                                                <div> <span class="d-block">0102030405</span> </div>
+
+                                                <div style="width: 18vh">
                                                     <select class="form-select form-select-sm" aria-label="Default select example">
                                                         <option selected>Sélectionner</option>
                                                         <option value="1">Gagné</option>
@@ -101,64 +129,13 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <span class="d-block">juniorpecpec@gmail.com</span>
-                                            <span class="d-block">0102030405</span>
                                         </div>
                                     </div>
-                                    <div class="d-flex text-muted pt-3">
-                                        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"> <rect width="100%" height="100%" fill="#52cbf0"></rect></svg>
-                                        <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
-                                            <div class="d-flex justify-content-between">
-                                                <strong class="text-gray-dark">Junior PECPEC</strong>
-                                                <div style="width: 130px">
-                                                    <select class="form-select form-select-sm" aria-label="Default select example">
-                                                        <option selected>Sélectionner</option>
-                                                        <option value="1">Gagné</option>
-                                                        <option value="2">À rappeler</option>
-                                                        <option value="3">Perdu</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <span class="d-block">juniorpecpec@gmail.com</span>
-                                            <span class="d-block">0102030405</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex text-muted pt-3">
-                                        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"> <rect width="100%" height="100%" fill="#52cbf0"></rect></svg>
-                                        <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
-                                            <div class="d-flex justify-content-between">
-                                                <strong class="text-gray-dark">Junior PECPEC</strong>
-                                                <div style="width: 130px">
-                                                    <select class="form-select form-select-sm" aria-label="Default select example">
-                                                        <option selected>Sélectionner</option>
-                                                        <option value="1">Gagné</option>
-                                                        <option value="2">À rappeler</option>
-                                                        <option value="3">Perdu</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <span class="d-block">juniorpecpec@gmail.com</span>
-                                            <span class="d-block">0102030405</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex text-muted pt-3">
-                                        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"> <rect width="100%" height="100%" fill="#52cbf0"></rect></svg>
-                                        <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
-                                            <div class="d-flex justify-content-between">
-                                                <strong class="text-gray-dark">Junior PECPEC</strong>
-                                                <div style="width: 130px">
-                                                    <select class="form-select form-select-sm" aria-label="Default select example">
-                                                        <option selected>Sélectionner</option>
-                                                        <option value="1">Gagné</option>
-                                                        <option value="2">À rappeler</option>
-                                                        <option value="3">Perdu</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <span class="d-block">juniorpecpec@gmail.com</span>
-                                            <span class="d-block">0102030405</span>
-                                        </div>
-                                    </div>
+
+
+
+
+
                                 </div>
                             </div>
                         </div>

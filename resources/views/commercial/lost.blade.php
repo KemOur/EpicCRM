@@ -13,7 +13,7 @@
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="p-6 bg-white border-b border-gray-200">
                             @if (auth()->check() && auth()->user()->id)
-                                <a href="{{ route('commercial.dashboard') }}">
+                                <a href="{{ route('commercial.dashboard') }}"></a>
                                 <div class="d-flex justify-content-between">
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
@@ -22,7 +22,7 @@
                                     </div>
                                     <div>
                                         @if (auth()->check() && auth()->user()->id)
-                                            <h5>Espace de travail {{auth()->user()->name}}</h5>
+                                            <h5>Espace de travail {{auth()->user()->firstname}}</h5>
                                         @else
                                         @endif
                                     </div>
