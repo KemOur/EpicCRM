@@ -41,7 +41,6 @@ Route::get('/about', function () { return view('pages.about');});
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/dashboard', function () { return view('dashboard'); })->name('dashboard');
-    /*Route::get('/dashboard/todo', function () { return view('todo'); })->middleware(['auth'])->name('dashboard');*/
     Route::get('/dashboard',  [CommercialController::class, 'index'])->name('commercial.dashboard');
     Route::get('/dashboard/todo',  [TodoController::class, 'index'])->name('commercial.todo');
     Route::get('/dashboard/do',  [DoController::class, 'index'])->name('commercial.do');
@@ -52,7 +51,7 @@ Route::group(['middleware' => 'auth'], function() {
 
 
 
-/*------------ADMIN ROUTES------------*/
+/*------------[ ADMIN ROUTES ]------------*/
 
 
 
