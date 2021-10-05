@@ -51,9 +51,6 @@
                                         </div>
                                     </h6>
 
-
-
-
                                     <div class="d-flex text-muted pt-3">
                                         <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                                             <div class="d-flex justify-content-between">

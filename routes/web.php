@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminUsersController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CommercialController;
@@ -40,8 +41,14 @@ Route::get('/about', function () { return view('pages.about');});
 
 /*--------COMMERCIAL ROUTES---------*/
 
-Route::group(['middleware' => 'auth'], function() {
+Route::group(['middleware' => 'auth', 'admin'], function() {
+    //Route::get('/admin',  [AdminUsersController::class, 'index'])->name('admin.dashboard');
+
     Route::get('/dashboard', function () { return view('dashboard'); })->name('dashboard');
+    Route::get('/dashboard',  [UsersController::class, 'index'])->name('pages.dashboard');
+
+
+
     Route::get('/dashboard',  [CommercialController::class, 'index'])->name('commercial.dashboard');
     Route::get('/dashboard/todo',  [TodoController::class, 'index'])->name('commercial.todo');
     Route::get('/dashboard/do',  [DoController::class, 'index'])->name('commercial.do');
@@ -54,15 +61,10 @@ Route::group(['middleware' => 'auth'], function() {
 
 /*------------[ ADMIN ROUTES ]------------*/
 
-Route::group(['middleware' => 'auth'], function (){
-    Route::group([
-        'prefix' => 'admin',
-        'middleware' => 'is_admin',
-        'as' => 'admin.',
-            ], function (){
+        Route::get('/dashboard/users', [UsersController::class, 'index'])->middleware('auth')->name('admin.dashboard');
 
-        Route::get('/dashboard', [UsersController::class, 'UsersController'])->name('admin.dashboard');
-        Route::get('/dashboard/users', [UsersController::class, 'renderUserList'])->middleware('auth')->name('admin.dashboard');
+
+
         Route::get('/dashboard/commercials', [UsersController::class, 'renderUserList'])->middleware('auth')->name('admin.dashboard');
         Route::get('/dashboard/leads', [UsersController::class, 'renderUserList'])->middleware('auth')->name('admin.dashboard');
 
@@ -70,8 +72,6 @@ Route::group(['middleware' => 'auth'], function (){
         Route::get('/admin/user/settings/{id}', [UsersController::class, 'renderUserAdminEditForm'])->middleware('auth')->name('admin.users.edit');;
         Route::put('/admin/users/{id}', [UsersController::class, 'updateUser'])->middleware('auth')->name("admin.users.update");
         Route::delete('/admin/users/{id}', [UsersController::class, 'deleteUser'])->middleware('auth')->name("admin.users.delete");
-    });
-});
 
 
 require __DIR__.'/auth.php';

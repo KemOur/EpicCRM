@@ -2,33 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class UsersController extends Controller
+class AdminUsersController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function index(Request $request)
+    public function index()
     {
         //
-        //return view('admin.dashboard');
-        if ($request->user()->is_admin) {
-            $userList = User::get();
-            return view('admin.dashboard', ['userlist' => $userList]);
-        } else {
-           return redirect()->route('commercial.dashboard');
-            //return view('commercial.dashboard');
-        }
+         //return view('admin.dashboard');
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function create()
     {
