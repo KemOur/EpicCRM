@@ -41,13 +41,10 @@ Route::get('/about', function () { return view('pages.about');});
 
 /*--------COMMERCIAL ROUTES---------*/
 
-Route::group(['middleware' => 'auth', 'admin'], function() {
+Route::group(['middleware' => 'auth'], function() {
     //Route::get('/admin',  [AdminUsersController::class, 'index'])->name('admin.dashboard');
 
-    Route::get('/dashboard', function () { return view('dashboard'); })->name('dashboard');
     Route::get('/dashboard',  [UsersController::class, 'index'])->name('pages.dashboard');
-
-
 
     Route::get('/dashboard',  [CommercialController::class, 'index'])->name('commercial.dashboard');
     Route::get('/dashboard/todo',  [TodoController::class, 'index'])->name('commercial.todo');
@@ -61,17 +58,27 @@ Route::group(['middleware' => 'auth', 'admin'], function() {
 
 /*------------[ ADMIN ROUTES ]------------*/
 
-        Route::get('/dashboard/users', [UsersController::class, 'index'])->middleware('auth')->name('admin.dashboard');
+        Route::get('/dashboard/admin', [UsersController::class, 'index'])->middleware('auth')->name('admin.dashboard');
+
+        //----Users-----//
+        Route::get('/dashboard/admin/users', [UsersController::class, 'users'])->middleware('auth')->name('admin.users');
+        Route::get('/dashboard/admin/adduser', [UsersController::class, 'adduser' ]) ->middleware('auth')->name('admin.adduser');
+
+        Route::post('/dashboard/admin/store', [UsersController::class, 'store' ]) ->middleware('auth')->name('admin.store');
 
 
-
-        Route::get('/dashboard/commercials', [UsersController::class, 'renderUserList'])->middleware('auth')->name('admin.dashboard');
-        Route::get('/dashboard/leads', [UsersController::class, 'renderUserList'])->middleware('auth')->name('admin.dashboard');
-
-        Route::get('/admin/user/{id}', [UsersController::class, 'renderUserDetails'])->middleware('auth')->name('admin.user');
+        //Route::get('/dashboard/admin', [UsersController::class, 'index'])->middleware('auth')->name('admin.dashboard');
+        /*Route::get('/admin/user/{id}', [UsersController::class, 'renderUserDetails'])->middleware('auth')->name('admin.user');
         Route::get('/admin/user/settings/{id}', [UsersController::class, 'renderUserAdminEditForm'])->middleware('auth')->name('admin.users.edit');;
         Route::put('/admin/users/{id}', [UsersController::class, 'updateUser'])->middleware('auth')->name("admin.users.update");
         Route::delete('/admin/users/{id}', [UsersController::class, 'deleteUser'])->middleware('auth')->name("admin.users.delete");
+*/
+
+        //----Leads----//
+        //Route::get('/dashboard/commercials', [UsersController::class, 'renderUserList'])->middleware('auth')->name('admin.dashboard');
+        //Route::get('/dashboard/leads', [UsersController::class, 'renderUserList'])->middleware('auth')->name('admin.dashboard');
+
+
 
 
 require __DIR__.'/auth.php';

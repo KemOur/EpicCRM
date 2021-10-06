@@ -33,6 +33,15 @@
         </svg>
 
         <style>
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+
             .bd-placeholder-img {
                 font-size: 1.125rem;
                 text-anchor: middle;
