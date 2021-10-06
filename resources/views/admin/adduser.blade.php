@@ -23,9 +23,9 @@
 
 
     <div class="col-md-6 col-lg-6 item" style="margin-left: 25%;margin-right: 25%; background-color: #ffffff; border-radius: 15px;">
-        <form method="POST" action="{{route('admin.adduser')}}" style="margin: 5%;">
-            <br>
+        <form method="POST" action="{{route('admin.store')}}" style="margin: 5%;">
             @csrf
+
             <x-label for="firstname" :value="__('NOM')" />
             <x-input id="firstname" class="block mt-1 w-full" type="text" name="firstname" :value="old('firstname')" required autofocus/>
             @error('firstname')

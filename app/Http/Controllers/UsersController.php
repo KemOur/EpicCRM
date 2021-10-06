@@ -54,8 +54,8 @@ class UsersController extends Controller
     public function adduser(Request $request)
     {
         if ($request->user()->is_admin) {
-            $userList = User::get();
-            return view('admin.adduser', ['userlist' => $userList]);
+            $user = User::get();
+            return view('admin.adduser', ['userlist' => $user]);
         } else {
             return redirect()->route('commercial.dashboard');
         }
@@ -78,7 +78,7 @@ class UsersController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect('admin/users')->with('success', 'Utilisateur àjouté avec succés');
+        return redirect('dashboard/admin/users')->with('success', 'Utilisateur àjouté avec succés');
         //return redirect(route('admin/users'));
     }
 
