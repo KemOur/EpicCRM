@@ -27,9 +27,9 @@
 <div>
         <div class="nav-scroller bg-body shadow-sm">
             <nav class="nav nav-underline" aria-label="Secondary navigation">
-                <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                <a class="nav-link active" href="{{ route('admin.dashboard') }}">Dashboard</a>
                 <a class="nav-link" href="#">Leads</a>
-                <a class="nav-link" href="#">Utilisateurs</a>
+                <a class="nav-link active" href="{{ route('admin.users') }}">Utilisateurs</a>
             </nav>
          </div>
 <br>
