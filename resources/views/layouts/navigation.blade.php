@@ -14,27 +14,19 @@
                         <!-- Navigation Links -->
                         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                             <x-nav-link :href="route('commercial.dashboard')" :active="request()->routeIs('commercial.dashboard')">
-                                {{ __('Prospects') }}
+                                {{ __('Leads') }}
                             </x-nav-link>
                             <x-nav-link :href="route('commercial.dashboard')" :active="request()->routeIs('commercial.dashboard')">
-                                {{ __('Opportunités') }}
+                                {{ __('Utilisateurs') }}
                             </x-nav-link>
                             <x-nav-link :href="route('commercial.dashboard')" :active="request()->routeIs('commercial.dashboard')">
-                                {{ __('Clients') }}
-                            </x-nav-link>
-                            <x-nav-link :href="route('commercial.dashboard')" :active="request()->routeIs('commercial.dashboard')">
-                                {{ __('Gestion') }}
+                                {{ __('Mes leads') }}
                             </x-nav-link>
                         </div>
                     </div>
 
                 <!-- Settings Dropdown -->
                 <div class="hidden sm:flex sm:items-center sm:ml-6">
-
-                    <!--Notification -->
-                    <div>
-                        <button type="button" class="btn btn-outline-dark">Ajouter</button>
-                    </div>
 
                     <!--Notification -->
                     <div style="margin: 20px">
