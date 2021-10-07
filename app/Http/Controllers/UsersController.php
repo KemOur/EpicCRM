@@ -97,11 +97,13 @@ class UsersController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function edit($id)
     {
         //
+        $user = User::find($id);
+        return view('admin.edituser', compact('user'));
     }
 
     /**
@@ -114,6 +116,23 @@ class UsersController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+        //dd($request);
+        $request->validate([
+            'firstname' => 'required|string|max:255',
+            'lastname' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,id,' .$id,
+            'password' => "required|min:8|confirmed",
+        ]);
+
+        $user = User::find($id);
+        $user-> update([
+            'firstname' => $request-> firstname,
+            'lastname' => $request-> lastname,
+            'email' => $request-> email,
+            'password' => $request-> password,
+        ]);
+        return redirect('dashboard/admin/users')->with('success', 'Les informations on été changé avec succés');
     }
 
     /**

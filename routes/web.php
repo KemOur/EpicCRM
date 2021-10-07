@@ -66,7 +66,10 @@ Route::group(['middleware' => 'auth'], function() {
         //----Ajouter---//
         Route::post('/dashboard/admin/store', [UsersController::class, 'store' ]) ->middleware('auth')->name('admin.store');
         //----delete----//
-        Route::delete('dashboard/admin/destroy/{id}', [UsersController::class, 'destroy'])->middleware('auth') ->name('admin.destroy');
+        Route::delete('dashboard/admin/destroy/{id}', [UsersController::class, 'dest-roy'])->middleware('auth') ->name('admin.destroy');
+        //---Edition---//
+        Route::get('dashboard/admin/edituser/{id}', [UsersController::class, 'edit' ]) ->middleware('auth')->name('admin.edit');
+        Route::put('dashboard/admin/edituser/store/{id}', [UsersController::class, 'update' ])->middleware('auth')->name('admin.update');
 
 
         //Route::get('/dashboard/admin', [UsersController::class, 'index'])->middleware('auth')->name('admin.dashboard');
