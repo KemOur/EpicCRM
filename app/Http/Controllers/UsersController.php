@@ -99,11 +99,14 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
-        //
-        $user = User::find($id);
-        return view('admin.edituser', compact('user'));
+        if ($request->user()->is_admin) {
+            $user = User::find($id);
+            return view('admin.edituser', compact('user'));
+        } else {
+            return redirect()->route('commercial.dashboard');
+        }
     }
 
     /**
@@ -115,8 +118,6 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-
         //dd($request);
         $request->validate([
             'firstname' => 'required|string|max:255',
@@ -124,14 +125,23 @@ class UsersController extends Controller
             'email' => 'required|string|email|max:255|unique:users,id,' .$id,
             'password' => "required|min:8|confirmed",
         ]);
+        //$user = User::find($id);
 
-        $user = User::find($id);
-        $user-> update([
-            'firstname' => $request-> firstname,
-            'lastname' => $request-> lastname,
-            'email' => $request-> email,
-            'password' => $request-> password,
-        ]);
+        if ($request->user()->id == $id || $request->user()->is_admin) {
+            $user = User::where('id', $id);
+            if ($request->user()->is_admin && $request->is_admin) {
+                $is_admin = $request->is_admin == "on" ? 1 : 0;
+            } else {
+                $is_admin = 0;
+            }
+            $user->update([
+                'firstname' => $request->firstname,
+                'lastname' => $request->lastname,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'is_admin' => $is_admin
+            ]);
+        }
         return redirect('dashboard/admin/users')->with('success', 'Les informations on été changé avec succés');
     }
 

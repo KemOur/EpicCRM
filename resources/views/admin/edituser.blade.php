@@ -48,7 +48,6 @@
                 <x-label for@="password" :value="__('Mot passe')" />
                 <x-input id="password" class="block mt-1 w-full"
                          type="password"
-                         value="{{$user->password}}"
                          name="password"
                          required autocomplete="new-password" />
                 @error('password')
@@ -60,13 +59,13 @@
 
                     <x-input id="password_confirmation" class="block mt-1 w-full"
                              type="password"
-                             value="{{$user->password}}"
                              name="password_confirmation" required />
                 </div>
                 <br>
                 <br>
-                <label>Admin ?</label>
-                <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="true" aria-label="...">
+                @if (auth()->user()->is_admin)
+                    <label for="is_admin"><input type="checkbox" name="is_admin" id="is_admin" {{ $user->is_admin ? " checked" : ""}}> Administrateur</label>
+                @endif
                 <x-button class="ml-4">
                     {{ __('Modifier') }}
                 </x-button>

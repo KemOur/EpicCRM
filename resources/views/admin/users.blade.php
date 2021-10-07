@@ -77,7 +77,9 @@
                     <td>{{ $user->email }}</td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            @if (auth()->user()->is_admin)
+                                <label for="is_admin"><input type="checkbox" name="is_admin" id="is_admin" {{ $user->is_admin ? " checked" : ""}}> Administrateur</label>
+                            @endif
                         </div>
                     </td>
                     <td>
