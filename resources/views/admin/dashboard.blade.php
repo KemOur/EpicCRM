@@ -12,9 +12,16 @@
                         </div>
                     </a>
                     <div>
-                        @if (auth()->check() && auth()->user()->id)
-                            <h6>Espace de travail {{auth()->user()->firstname}}</h6>
-                        @else
+                        @if(auth()->check() && auth()->user()->id)
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <button :href="route('logout')"
+                                                               onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                                            {{ __('Se déconnecter') }}
+                                        </button>
+                                    </form>
+                                @else
                         @endif
                     </div>
                 </div>

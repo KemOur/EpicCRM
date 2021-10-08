@@ -142,7 +142,13 @@ class UsersController extends Controller
                 'is_admin' => $is_admin
             ]);
         }
-        return redirect('dashboard/admin/users')->with('success', 'Les informations on été changé avec succés');
+
+        if ($request->user()->is_admin) {
+            return redirect('dashboard/admin/users')->with('success', 'Les informations on été changé avec succés');
+        } else {
+            return redirect()->route('commercial.dashboard');
+        }
+
     }
 
     /**
