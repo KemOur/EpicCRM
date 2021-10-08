@@ -19,7 +19,7 @@ class UsersController extends Controller
             $userList = User::get();
             return view('admin.dashboard', ['userlist' => $userList]);
         } else {
-           return redirect()->route('commercial.dashboard');
+            return redirect()->route('commercial.dashboard');
         }
     }
 
@@ -29,7 +29,7 @@ class UsersController extends Controller
             $userList = User::get();
             return view('admin.users', ['userlist' => $userList]);
         } else {
-           return redirect()->route('commercial.dashboard');
+            return redirect()->route('commercial.dashboard');
         }
     }
 

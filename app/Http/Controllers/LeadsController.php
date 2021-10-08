@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CommercialController extends Controller
+class LeadsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,9 @@ class CommercialController extends Controller
      */
     public function index()
     {
-        //----Commercial dashboard-----///
-        return view('commercial.dashboard');
+        //
+        return view('admin.leads');
+
     }
 
     /**

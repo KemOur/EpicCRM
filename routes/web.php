@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminUsersController;
+use App\Http\Controllers\LeadsController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CommercialController;
@@ -44,7 +45,7 @@ Route::get('/about', function () { return view('pages.about');});
 Route::group(['middleware' => 'auth'], function() {
     //Route::get('/admin',  [AdminUsersController::class, 'index'])->name('admin.dashboard');
 
-    Route::get('/dashboard',  [UsersController::class, 'index'])->name('pages.dashboard');
+    //Route::get('/dashboard',  [UsersController::class, 'index'])->name('pages.dashboard');
 
     Route::get('/dashboard',  [CommercialController::class, 'index'])->name('commercial.dashboard');
     Route::get('/dashboard/todo',  [TodoController::class, 'index'])->name('commercial.todo');
@@ -55,21 +56,27 @@ Route::group(['middleware' => 'auth'], function() {
 });
 
 
+                            /*--------------------------------------------------------[ ADMIN ]----------------------------------------------------------------*/
 
-/*------------[ ADMIN ROUTES ]------------*/
+/*------------[ ADMIN ROUTES -- USEARS ]------------*/
 
         Route::get('/dashboard/admin', [UsersController::class, 'index'])->middleware('auth')->name('admin.dashboard');
-
-        //----Users-----//
+        //----USERS LIST-----//
         Route::get('/dashboard/admin/users', [UsersController::class, 'users'])->middleware('auth')->name('admin.users');
+        //----FORM to add a new user----//
         Route::get('/dashboard/admin/adduser', [UsersController::class, 'adduser' ]) ->middleware('auth')->name('admin.adduser');
-        //----Ajouter---//
+        //----ADD---//
         Route::post('/dashboard/admin/store', [UsersController::class, 'store' ]) ->middleware('auth')->name('admin.store');
-        //----delete----//
+        //----DELETE----//c
         Route::delete('dashboard/admin/destroy/{id}', [UsersController::class, 'dest-roy'])->middleware('auth') ->name('admin.destroy');
-        //---Edition---//
+        //---EDITION-Form and edit---//
         Route::get('dashboard/admin/edituser/{id}', [UsersController::class, 'edit' ]) ->middleware('auth')->name('admin.edit');
         Route::put('dashboard/admin/edituser/store/{id}', [UsersController::class, 'update' ])->middleware('auth')->name('admin.update');
+
+
+/*------------[ ADMIN ROUTES -- LEADS ]------------*/
+
+        Route::get('/dashboard/admin/leads', [LeadsController::class, 'index'])->middleware('auth')->name('admin.leads');
 
 
         //Route::get('/dashboard/admin', [UsersController::class, 'index'])->middleware('auth')->name('admin.dashboard');
