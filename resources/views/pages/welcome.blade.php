@@ -1,6 +1,5 @@
 @extends('layouts.main')
 @section('content')
-    <div class="container">
         <header>
             @extends("layouts.navigation")
         </header>
@@ -168,6 +167,5 @@
                     </table>
                 </div>
             </main>
-        </div>
 
 @endsection

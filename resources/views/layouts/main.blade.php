@@ -65,7 +65,7 @@
             }*/
 
             .container {
-                max-width: 960px;
+                max-width: 1060px;
             }
 
             .pricing-header {
