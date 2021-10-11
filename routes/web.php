@@ -60,10 +60,13 @@ Route::group(['middleware' => 'auth'], function() {
 
 /*------------[ ADMIN ROUTES -- USEARS ]------------*/
 
+        //--DASHBOARD ADMIN--//
         Route::get('/dashboard/admin', [UsersController::class, 'index'])->middleware('auth')->name('admin.dashboard');
+
+
         //----USERS LIST-----//
         Route::get('/dashboard/admin/users', [UsersController::class, 'users'])->middleware('auth')->name('admin.users');
-        //----FORM to add a new user----//
+        //----FORM NEW USER----//
         Route::get('/dashboard/admin/adduser', [UsersController::class, 'adduser' ]) ->middleware('auth')->name('admin.adduser');
         //----ADD---//
         Route::post('/dashboard/admin/store', [UsersController::class, 'store' ]) ->middleware('auth')->name('admin.store');
@@ -76,10 +79,12 @@ Route::group(['middleware' => 'auth'], function() {
 
 /*------------[ ADMIN ROUTES -- LEADS ]------------*/
 
+        //---LEADS LIST---//
         Route::get('/dashboard/admin/leads', [LeadsController::class, 'index'])->middleware('auth')->name('admin.leads');
+        //--FORM NEW LEAD--//
+        Route::get('/dashboard/admin/addlead', [LeadsController::class, 'addlead'])->middleware('auth')->name('admin.adduser');
 
 
-        //Route::get('/dashboard/admin', [UsersController::class, 'index'])->middleware('auth')->name('admin.dashboard');
         /*Route::get('/admin/user/{id}', [UsersController::class, 'renderUserDetails'])->middleware('auth')->name('admin.user');
         Route::get('/admin/user/settings/{id}', [UsersController::class, 'renderUserAdminEditForm'])->middleware('auth')->name('admin.users.edit');;
         Route::put('/admin/users/{id}', [UsersController::class, 'updateUser'])->middleware('auth')->name("admin.users.update");
@@ -89,8 +94,6 @@ Route::group(['middleware' => 'auth'], function() {
         //----Leads----//
         //Route::get('/dashboard/commercials', [UsersController::class, 'renderUserList'])->middleware('auth')->name('admin.dashboard');
         //Route::get('/dashboard/leads', [UsersController::class, 'renderUserList'])->middleware('auth')->name('admin.dashboard');
-
-
 
 
 require __DIR__.'/auth.php';

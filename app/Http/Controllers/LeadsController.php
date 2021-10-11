@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class LeadsController extends Controller
@@ -23,9 +24,15 @@ class LeadsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function addlead (Request $request)
     {
         //
+        if ($request->user()->is_admin) {
+            $user = User::get();
+            return view('admin.addlead', ['userlist' => $user]);
+        } else {
+            return redirect()->route('commercial.dashboard');
+        }
     }
 
     /**

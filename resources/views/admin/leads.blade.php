@@ -46,7 +46,7 @@
             <div>
                 <a href="{{ route('admin.adduser') }}">
                     <div>
-                        <button style="float: right" type="button" class="btn btn-outline-info">Ajouter un utilisateur</button>
+                        <button style="float: right" type="button" class="btn btn-outline-info">Ajouter un lead</button>
                     </div>
                 </a>
             </div>

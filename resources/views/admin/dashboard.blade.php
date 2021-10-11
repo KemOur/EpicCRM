@@ -35,7 +35,7 @@
         <div class="nav-scroller bg-body shadow-sm">
             <nav class="nav nav-underline" aria-label="Secondary navigation">
                 <a class="nav-link active" href="{{ route('admin.dashboard') }}">Dashboard</a>
-                <a class="nav-link" href="#">Leads</a>
+                <a class="nav-link active" href="{{ route('admin.leads') }}">Leads</a>
                 <a class="nav-link active" href="{{ route('admin.users') }}">Utilisateurs</a>
             </nav>
         </div>
@@ -47,7 +47,9 @@
                     <p>Administration des leads</p>
                     <p>
                         Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée                </p>
-                    <button class="btn btn-outline-light" type="button">Leads</button>
+                    <a href="{{ route('admin.leads') }}">
+                            <button class="btn btn-outline-light" type="button">Leads</button>
+                    </a>
                 </div>
             </div>
             <div class="col-md-6">
@@ -57,9 +59,7 @@
                         Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée                </p>
 
                     <a href="{{ route('admin.users') }}">
-                        <div>
                             <button class="btn btn-outline-secondary" type="button">Utilisateurs</button>
-                        </div>
                     </a>
                 </div>
             </div>
