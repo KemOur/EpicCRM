@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Lead;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class LeadsController extends Controller
 {
@@ -15,7 +18,12 @@ class LeadsController extends Controller
     public function index()
     {
         //
-        return view('admin.leads');
+        $leads = Lead::all();
+        /*
+        dd($leads);
+        die();
+        */
+        return view('admin.leads', compact('leads'));
 
     }
 
@@ -43,7 +51,35 @@ class LeadsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        $request->validate([
+            'date' => 'required|date|max:255',
+            'client' => 'required|string|max:255',
+            'company' => 'required|string|max:255',
+            'coast' => 'required|string|max:255',
+            'origin' => 'required|string|max:255',
+            'state' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'phone' => 'required|string|max:10',
+            'description' => 'required|string|max:255',
+
+        ]);
+
+         $lead = Lead::create([
+            'date' => $request->input('date'),
+            'client' => $request->input('client'),
+            'company' => $request->input('company'),
+            'coast' => $request->input('coast'),
+            'origin' => $request->input('origin'),
+            'state' => $request->input('state'),
+            'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
+            'description' => $request->input('description'),
+
+         ]);
+
+        return redirect()->route('admin.leads')->with('success', 'Un lead viens d\'être ajouté avec succés');
+        //return redirect(route('admin/users'));
     }
 
     /**

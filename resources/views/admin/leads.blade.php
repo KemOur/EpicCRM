@@ -58,29 +58,34 @@
                 <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Clients</th>
-                    <th scope="col">Entreprise</th>
-                    <th scope="col">Montant</th>
-                    <th scope="col">Provenance</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Mail</th>
-                    <th scope="col">Téléphone</th>
-                    <th scope="col">Notes</th>
+                    <th scope="col"><small>Date</small></th>
+                    <th scope="col"><small>Clients</small></th>
+                    <th scope="col"><small>Entreprise</small></th>
+                    <th scope="col"><small>Montant</small></th>
+                    <th scope="col"><small>Provenance</small></th>
+                    <th scope="col"><small>Status</small></th>
+                    <th scope="col"><small>Mail</small></th>
+                    <th scope="col"><small>Téléphone</small></th>
+                    <th scope="col"><small>Description</small></th>
+                    <th scope="col"></th>
+                    <th scope="col"><small>Action</small></th>
                 </tr>
                 </thead>
 
                         <tbody>
+                        @if($leads->isNotEmpty())
+                            @foreach($leads as $lead)
                         <tr>
                             <th scope="row">id</th>
-                            <td><small>10/12/2021</small></td>
-                            <td><small>Junioor</small></td>
-                            <td><small>EpicEvents</small></td>
-                            <td><small>2000€</small></td>
-                            <td><small>laboratoire chinois</small></td>
-                            <td><small>to do</small></td>
-                            <td><small>junior@gmail.com</small></td>
-                            <td><small>0102030404</small></td>
+                            <td><small>{{ $lead->date }}</small></td>
+                            <td><small>{{ $lead->client }}</small></td>
+                            <td><small>{{ $lead->company }}</small></td>
+                            <td><small>{{ $lead->coast }}€</small></td>
+                            <td><small>{{ $lead->origin }}</small></td>
+                            <td><small>{{ $lead->state }}</small></td>
+                            <td><small>{{ $lead->email }}</small></td>
+                            <td><small>{{ $lead->phone }}</small></td>
+                            <td><small>{{ $lead->description }}</small></td>
 
                             <td>
                                 <a href="">
@@ -110,12 +115,14 @@
                                     </button>
                                 </form>
                             </td>
-
                         </tr>
+                        @endforeach
+                        @else
+                            <li>There is no leads in database</li>
+                        @endif
                     </tbody>
             </table>
         </div>
     </div>
-
 
 @endsection

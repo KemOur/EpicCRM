@@ -66,13 +66,13 @@ Route::group(['middleware' => 'auth'], function() {
 
         //----USERS LIST-----//
         Route::get('/dashboard/admin/users', [UsersController::class, 'users'])->middleware('auth')->name('admin.users');
-        //----FORM NEW USER----//
+        //----ADD FORM USER----//
         Route::get('/dashboard/admin/adduser', [UsersController::class, 'adduser' ]) ->middleware('auth')->name('admin.adduser');
-        //----ADD---//
+        //----STORE---//
         Route::post('/dashboard/admin/store', [UsersController::class, 'store' ]) ->middleware('auth')->name('admin.store');
-        //----DELETE----//c
+        //----DELETE----//
         Route::delete('dashboard/admin/destroy/{id}', [UsersController::class, 'dest-roy'])->middleware('auth') ->name('admin.destroy');
-        //---EDITION-Form and edit---//
+        //---EDITION-FORM AND EDIT---//
         Route::get('dashboard/admin/edituser/{id}', [UsersController::class, 'edit' ]) ->middleware('auth')->name('admin.edit');
         Route::put('dashboard/admin/edituser/store/{id}', [UsersController::class, 'update' ])->middleware('auth')->name('admin.update');
 
@@ -81,8 +81,11 @@ Route::group(['middleware' => 'auth'], function() {
 
         //---LEADS LIST---//
         Route::get('/dashboard/admin/leads', [LeadsController::class, 'index'])->middleware('auth')->name('admin.leads');
-        //--FORM NEW LEAD--//
+        //--ADD FORM LEAD--//
         Route::get('/dashboard/admin/addlead', [LeadsController::class, 'addlead'])->middleware('auth')->name('admin.adduser');
+        //---store---//
+        Route::post('/dashboard/admin/store', [LeadsController::class, 'store' ]) ->middleware('auth')->name('admin.store');
+
 
 
         /*Route::get('/admin/user/{id}', [UsersController::class, 'renderUserDetails'])->middleware('auth')->name('admin.user');

@@ -13,7 +13,7 @@
                             </div>
                         </a>
                         <div>
-                            <h6>Ajouter un nouvel lead !</h6>
+                            <h6>Ajouter un lead !</h6>
                         </div>
                     </div>
                 @else
@@ -23,15 +23,18 @@
 
 
         <div class="col-md-6 col-lg-6 item" style="margin-left: 25%;margin-right: 25%; background-color: #ffffff; border-radius: 15px;">
-            <form method="POST" action="{{route('admin.store')}}" style="margin: 5%;">
+            <form method="POST" action="{{route('admin.store')}}" style="margin: 5%;" enctype="multipart/form-data">
                 @csrf
 
                 <label for="date" class="form-label">Date</label>
                 <input type="date" class="form-control" id="date" name="date" value="{{ old('date')}}" min="2021-02-21">
+                @error('date')
+                {{$message}}
+                @enderror
 
-                <x-label for="clientname" :value="__('Client')" />
-                <x-input id="clientname" class="block mt-1 w-full" type="text" name="clientname" :value="old('clientname')" required autofocus/>
-                @error('clientname')
+                <x-label for="client" :value="__('Client')" />
+                <x-input id="client" class="block mt-1 w-full" type="text" name="client" :value="old('client')" required autofocus/>
+                @error('client')
                 {{$message}}
                 @enderror
 
@@ -41,12 +44,15 @@
                 {{$message}}
                 @enderror
 
-                <label for="date" class="form-label">Montant</label>
+                <x-label for="montant" :value="__('Montant')" />
                 <div class="input-group mb-3">
                     <span class="input-group-text">€</span>
-                    <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <input id="coast" name="coast" type="number" class="form-control" aria-label="Amount (to the nearest euro)">
                     <span class="input-group-text">.00</span>
                 </div>
+                @error('coast')
+                {{$message}}
+                @enderror
 
                 <x-label for="origin" :value="__('Provenance')" />
                 <x-input id="origin" class="block mt-1 w-full" type="text" name="origin" :value="old('origin')" required autofocus/>
@@ -55,8 +61,13 @@
                 @enderror
 
                 <x-label for="state" :value="__('Status')" />
-                <x-input id="state" class="block mt-1 w-full" type="text" name="state" :value="old('state')" required autofocus/>
-                @error('origin')
+                <select class="form-select" aria-label="Default select example"  id="state" name="state" required autofocus>
+                    <option value="À faire">À faire</option>
+                    <option value="Fait">Fait</option>
+                    <option value="À appeler">À appeler</option>
+                    <option value="Perdu">Perdu</option>
+                </select>
+                @error('state')
                 {{$message}}
                 @enderror
 
@@ -68,8 +79,19 @@
 
                 <label for="phone" class="form-label">Téléphone</label>
                 <div class="input-group mb-3">
-                    <input type="number" class="form-control" placeholder="" aria-label="phone" aria-describedby="basic-addon1">
+                    <input type="number" class="form-control" placeholder="" id="phone" name="phone" aria-label="phone" aria-describedby="basic-addon1">
                 </div>
+                @error('phone')
+                {{$message}}
+                @enderror
+
+                <label for="description">Description</label>
+                <div class="form-floating">
+                    <textarea name="description" class="form-control" placeholder="Écrivez un commentaire ci-dessus" id="description" :value="old('description')" style="height: 100px"></textarea>
+                </div>
+                @error('description')
+                {{$message}}
+                @enderror
 
                 <br>
                 <x-button class="ml-4">
