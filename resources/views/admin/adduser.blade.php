@@ -23,7 +23,7 @@
 
 
     <div class="col-md-6 col-lg-6 item" style="margin-left: 25%;margin-right: 25%; background-color: #ffffff; border-radius: 15px;">
-        <form method="POST" action="{{route('admin.store')}}" style="margin: 5%;">
+        <form method="POST" action="{{route('admin.store.user')}}" style="margin: 5%;">
             @csrf
 
             <x-label for="firstname" :value="__('NOM')" />
@@ -60,7 +60,9 @@
             <br>
             <br>
             <label>Admin ?</label>
-            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="true" aria-label="...">
+            @if (auth()->user()->is_admin)
+                <label for="is_admin"><input type="checkbox" name="is_admin" id="is_admin" {{ $userlist ? " checked" : ""}}> Administrateur</label>
+            @endif
             <x-button class="ml-4">
                 {{ __('Créer un compte') }}
             </x-button>

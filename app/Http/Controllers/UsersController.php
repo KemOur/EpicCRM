@@ -61,14 +61,21 @@ class UsersController extends Controller
             'password' => "required|min:8|confirmed",
         ]);
 
-        User::create([
-            'firstname' => $request->firstname,
-            'lastname' => $request->lastname,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
 
-        return redirect('dashboard/admin/users')->with('success', 'Utilisateur àjouté avec succés');
+            if ($request->user()->is_admin && $request->is_admin) {
+                $is_admin = $request->is_admin == "on" ? 1 : 0;
+            } else {
+                $is_admin = 0;
+            }
+            User::create([
+                'firstname' => $request->firstname,
+                'lastname' => $request->lastname,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'is_admin' => $is_admin,
+            ]);
+
+            return redirect('dashboard/admin/users')->with('success', 'Utilisateur àjouté avec succés');
         //return redirect(route('admin/users'));
     }
 

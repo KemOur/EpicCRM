@@ -23,7 +23,7 @@
 
 
         <div class="col-md-6 col-lg-6 item" style="margin-left: 25%;margin-right: 25%; background-color: #ffffff; border-radius: 15px;">
-            <form method="POST" action="{{ route('admin.update', $user->id) }}" style="margin: 5%;">
+            <form method="POST" action="{{ route('admin.update.user', $user->id) }}" style="margin: 5%;">
                 @csrf
                 @method('put')
 
@@ -49,6 +49,7 @@
                 <x-input id="password" class="block mt-1 w-full"
                          type="password"
                          name="password"
+                         value="{{$user->password}}"
                          required autocomplete="new-password" />
                 @error('password')
                 {{$message}}
@@ -56,9 +57,9 @@
 
                 <div class="mt-4">
                     <x-label for="password_confirmation" :value="__('Confirmer mot passe')" />
-
                     <x-input id="password_confirmation" class="block mt-1 w-full"
                              type="password"
+                             value="{{$user->password}}"
                              name="password_confirmation" required />
                 </div>
                 <br>
