@@ -45,7 +45,7 @@
                 @error('email')
                 {{$message}}
                 @enderror
-                <x-label for@="password" :value="__('Mot passe')" />
+                <x-label for="password" :value="__('Mot passe')" />
                 <x-input id="password" class="block mt-1 w-full"
                          type="password"
                          name="password"

@@ -1,29 +1,21 @@
 @extends('layouts.main')
 @section('content')
-
-    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-        <div class="p-6 bg-white border-b border-gray-200">
-            @if (auth()->check() && auth()->user()->id)
-                <div class="d-flex justify-content-between">
+    <div style="background-color: #52cffb" class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
+        <div class="lh-1">
+            <div style="display: flex">
+                <div>
                     <a href="{{ route('admin.dashboard') }}">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                            </svg>
-                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="26" fill="currentColor" style="color: #ffffff" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                        </svg>
                     </a>
-                    <div>
-                        @if (auth()->check() && auth()->user()->id)
-                            <h6>Espace de travail {{auth()->user()->firstname}}</h6>
-                        @else
-                        @endif
-                    </div>
                 </div>
-            @else
-            @endif
+                <div>
+                    <p>revenir</p>
+                </div>
+            </div>
         </div>
     </div>
-
 
     <div>
         <div class="nav-scroller bg-body shadow-sm">
@@ -43,13 +35,23 @@
 
         <div class="row align-items-md-stretch">
 
-            <div>
-                <a href="{{ route('admin.adduser') }}">
-                    <div>
-                        <button style="float: right" type="button" class="btn btn-outline-info">Ajouter un lead</button>
+            <div style="">
+                <div style="float: left">
+                    <a href="{{ route('admin.adduser') }}">
+                        <div>
+                            <button class="btn btn-primary" type="button">Ajouter un lead</button>
+                        </div>
+                    </a>
+                </div>
+
+                <div style="float: right">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Rechercher</span>
+                        <input type="search" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
-                </a>
+                </div>
             </div>
+
             <br>
             <br>
             <hr>
@@ -57,8 +59,6 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col"><small>Date</small></th>
                     <th scope="col"><small>Clients</small></th>
                     <th scope="col"><small>Entreprise</small></th>
                     <th scope="col"><small>Montant</small></th>
@@ -66,8 +66,6 @@
                     <th scope="col"><small>Status</small></th>
                     <th scope="col"><small>Mail</small></th>
                     <th scope="col"><small>Téléphone</small></th>
-                    <th scope="col"><small>Description</small></th>
-                    <th scope="col"></th>
                     <th scope="col"><small>Action</small></th>
                 </tr>
                 </thead>
@@ -76,8 +74,6 @@
                         @if($leads->isNotEmpty())
                             @foreach($leads as $lead)
                         <tr>
-                            <th scope="row">id</th>
-                            <td><small>{{ $lead->date }}</small></td>
                             <td><small>{{ $lead->client }}</small></td>
                             <td><small>{{ $lead->company }}</small></td>
                             <td><small>{{ $lead->coast }}€</small></td>
@@ -85,19 +81,18 @@
                             <td><small>{{ $lead->state }}</small></td>
                             <td><small>{{ $lead->email }}</small></td>
                             <td><small>{{ $lead->phone }}</small></td>
-                            <td><small>{{ $lead->description }}</small></td>
 
                             <td>
-                                <a href="">
-                                <svg style="color: skyblue" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-square" viewBox="0 0 16 16">
-                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
-                                </svg>
+                                <a href="{{route('admin.show', $lead->id )}}">
+                                    <svg style="color: skyblue" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-square" viewBox="0 0 16 16">
+                                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                                    </svg>
                                 </a>
                             </td>
 
                             <td>
-                                <a href="">
+                                <a href="{{route('admin.edit', $lead->id )}}">
                                     <svg style="color: #59B0E3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                                         <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                         <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>

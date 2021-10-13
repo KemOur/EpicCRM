@@ -88,9 +88,19 @@ class LeadsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request,$id)
     {
         //
+            $leads = Lead::all();
+            $lead = Lead::find($id);
+        if ($request->user()->is_admin) {
+            $user = User::get();
+            return view('admin.showlead', compact('user', 'lead', 'leads'));
+        } else {
+            return redirect()->route('commercial.dashboard');
+
+        }
+
     }
 
     /**
@@ -99,9 +109,17 @@ class LeadsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request,$id)
     {
         //
+            $leads = Lead::all();
+            $lead = Lead::find($id);
+        if ($request->user()->is_admin) {
+            $user = User::find($id);
+            return view('admin.editlead', compact('lead', 'user', 'leads'));
+        } else {
+            return redirect()->route('commercial.dashboard');
+        }
     }
 
     /**
@@ -114,6 +132,36 @@ class LeadsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $request->validate([
+            'date' => 'required|date|max:255',
+            'client' => 'required|string|max:255',
+            'company' => 'required|string|max:255',
+            'coast' => 'required|string|max:255',
+            'origin' => 'required|string|max:255',
+            'state' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,id,' .$id,
+            'phone' => 'required|string|max:10',
+            'description' => 'required|string|max:255',
+        ]);
+
+            $lead = Lead::find($id);
+            $lead->update([
+                'date' => $request->date,
+                'client' => $request->client,
+                'company' => $request->company,
+                'coast' => $request->coast,
+                'origin' => $request->origin,
+                'state' => $request->state,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'description' => $request->description,
+            ]);
+
+        if ($request->user()->is_admin) {
+            return redirect('dashboard/admin/leads')->with('success', 'Les informations on été changé avec succés');
+        } else {
+            return redirect()->route('commercial.dashboard');
+        }
     }
 
     /**
