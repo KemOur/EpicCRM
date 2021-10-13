@@ -1,12 +1,12 @@
 @extends('layouts.main')
-@section('content')
+@section('content')<br>
     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-        <div class="p-6 bg-white border-b border-gray-200">
+        <div class="p-6 border-b border-gray-200" style="background-color: #52cffb">
             @if (auth()->check() && auth()->user()->id)
                 <div class="d-flex justify-content-between">
                     <a href="{{ route('commercial.dashboard') }}">
                         <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="color: #ffffff" width="56" height="26" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
                             </svg>
                         </div>
@@ -15,10 +15,10 @@
                         @if(auth()->check() && auth()->user()->id)
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
-                                <button :href="route('logout')"
+                                <button style="color:#ffffff;" :href="route('logout')"
                                         onclick="event.preventDefault();
                                             this.closest('form').submit();">
-                                    {{ __('Se déconnecter') }}
+                                    {{ __('se déconnecter') }}
                                 </button>
                             </form>
                         @else
@@ -29,7 +29,6 @@
             @endif
         </div>
     </div>
-
 
     <div>
         <div class="nav-scroller bg-body shadow-sm">
