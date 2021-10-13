@@ -37,7 +37,7 @@
 
             <div style="">
                 <div style="float: left">
-                    <a href="{{ route('admin.adduser') }}">
+                    <a href="{{ route('admin.addlead') }}">
                         <div>
                             <button class="btn btn-primary" type="button">Ajouter un lead</button>
                         </div>
@@ -101,7 +101,9 @@
                             </td>
 
                             <td>
-                                <form action="" method="post">
+                                <form action="{{route('admin.destroy', $lead->id)}}" method="post">
+                                    @csrf
+                                    @method('delete')
                                     <button onclick="return confirm('Vous êtes sûr ?')" type="submit">
                                         <svg style="color: red" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>

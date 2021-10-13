@@ -71,7 +71,7 @@ Route::group(['middleware' => 'auth'], function() {
         //----STORE---//
         Route::post('/dashboard/admin/store', [UsersController::class, 'store' ]) ->middleware('auth')->name('admin.store');
         //----DELETE----//
-        Route::delete('dashboard/admin/destroy/{id}', [UsersController::class, 'dest-roy'])->middleware('auth') ->name('admin.destroy');
+        Route::delete('dashboard/admin/destroy/{id}', [UsersController::class, 'destroy'])->middleware('auth') ->name('admin.destroy');
         //---EDITION-FORM AND EDIT---//
         Route::get('dashboard/admin/edituser/{id}', [UsersController::class, 'edit' ]) ->middleware('auth')->name('admin.edit');
         Route::put('dashboard/admin/edituser/store/{id}', [UsersController::class, 'update' ])->middleware('auth')->name('admin.update');
@@ -82,7 +82,7 @@ Route::group(['middleware' => 'auth'], function() {
         //---LEADS LIST---//
         Route::get('/dashboard/admin/leads', [LeadsController::class, 'index'])->middleware('auth')->name('admin.leads');
         //--ADD FORM LEAD--//
-        Route::get('/dashboard/admin/addlead', [LeadsController::class, 'addlead'])->middleware('auth')->name('admin.adduser');
+        Route::get('/dashboard/admin/addlead', [LeadsController::class, 'addlead'])->middleware('auth')->name('admin.addlead');
         //---SSTORE---//
         Route::post('/dashboard/admin/store', [LeadsController::class, 'store' ]) ->middleware('auth')->name('admin.store');
         //--SHOW--//
@@ -90,6 +90,8 @@ Route::group(['middleware' => 'auth'], function() {
         //-EDITION-FORM and edit-//
         Route::get('dashboard/admin/editlead/{id}', [LeadsController::class, 'edit' ]) ->middleware('auth')->name('admin.edit');
         Route::put('dashboard/admin/editlead/store/{id}', [LeadsController::class, 'update' ])->middleware('auth')->name('admin.update');
+        //---DELETE---//
+        Route::delete('dashboard/admin/destroy/{id}', [LeadsController::class, 'destroy'])->middleware('auth') ->name('admin.destroy');
 
 
 require __DIR__.'/auth.php';

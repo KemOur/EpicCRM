@@ -170,8 +170,16 @@ class LeadsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
         //
+        $lead = Lead::find($id);
+        $lead->delete();
+
+        if ($request->user()->is_admin) {
+            return redirect('dashboard/admin/leads')->with('success', 'Les informations on été changé avec succés');
+        } else {
+            return redirect()->route('commercial.dashboard');
+        }
     }
 }
