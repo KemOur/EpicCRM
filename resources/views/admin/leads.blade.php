@@ -56,7 +56,7 @@
             <br>
             <hr>
 
-            <table class="table table-striped">
+            <table id="id_lead" class="display table table-striped">
                 <thead>
                 <tr>
                     <th scope="col"><small>Clients</small></th>
@@ -66,7 +66,9 @@
                     <th scope="col"><small>Status</small></th>
                     <th scope="col"><small>Mail</small></th>
                     <th scope="col"><small>Téléphone</small></th>
-                    <th scope="col"><small>Action</small></th>
+                    <th scope="col"><small>Détail</small></th>
+                    <th scope="col"><small>Modifier</small></th>
+                    <th scope="col"><small>Supprimer</small></th>
                 </tr>
                 </thead>
 
@@ -121,5 +123,4 @@
             </table>
         </div>
     </div>
-
 @endsection

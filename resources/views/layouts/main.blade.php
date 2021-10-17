@@ -3,6 +3,7 @@
 <head>
     <link rel="shortcut icon" type="image/png" href="imgs/1A.png">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,9 +13,6 @@
         <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
         <meta name="generator" content="Hugo 0.88.1">
         <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/pricing/">
-
-        <!-- Bootstrap core CSS -->
-        <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
         <!-- Favicons -->
         <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -82,4 +80,36 @@
 </div>
 @yield('scripts')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+<script>
+    $(document).ready( function () {
+        $('#id_lead').DataTable({
+            "language": {
+                "search": "Rechercher :",
+                "sProcessing":    "Traitement...",
+                "sLengthMenu":    "Afficher _MENU_ Leads",
+                "sZeroRecords":   "Aucun résultat trouvé",
+                "sEmptyTable":    "Aucune donnée disponible dans ce tableau",
+                "sInfo":          "_TOTAL_ Leads disponibles",
+                "sInfoEmpty":     "Actuelement vous n'avez aucun lead de disponible",
+                "sInfoFiltered":  "(filtré sur un total de _MAX_ leads)",
+                "sInfoPostFix":   "",
+                "sUrl":           "",
+                "sInfoThousands":  ",",
+                "sLoadingRecords": "Mise en charge...",
+                "oPaginate": {
+                    "sFirst":    "Premier",
+                    "sLast":    "Dernier",
+                    "sNext":    "Prochain",
+                    "sPrevious": "Précédent"
+                },
+                "oAria": {
+                    "sSortAscending":  ": Activer pour trier la colonne par ordre croissant",
+                    "sSortDescending": ": Activer pour trier la colonne par ordre décroissant"
+                }
+            }
+        });
+    } );
+</script>
 </body>

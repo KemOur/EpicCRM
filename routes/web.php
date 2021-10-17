@@ -84,11 +84,10 @@ Route::group(['middleware' => 'auth'], function() {
         Route::post('/dashboard/admin/store', [\App\Http\Controllers\LeadsController::class, 'store' ]) ->middleware('auth')->name('admin.store');
         //--SHOW--//
         Route::get('dashboard/admin/show/{id}', [\App\Http\Controllers\LeadsController::class, 'show' ]) ->middleware('auth')->name('admin.show');
+        //---DELETE---//
+        Route::delete('dashboard/admin/destroy/{id}', [\App\Http\Controllers\LeadsController::class, 'destroy'])->middleware('auth') ->name('admin.destroy');
         //-EDITION-FORM and edit-//
         Route::get('dashboard/admin/editlead/{id}', [\App\Http\Controllers\LeadsController::class, 'edit' ]) ->middleware('auth')->name('admin.edit');
         Route::put('dashboard/admin/editlead/store/{id}', [\App\Http\Controllers\LeadsController::class, 'update' ])->middleware('auth')->name('admin.update');
-        //---DELETE---//
-        Route::delete('dashboard/admin/destroy/{id}', [\App\Http\Controllers\LeadsController::class, 'destroy'])->middleware('auth') ->name('admin.destroy');
-
 
 require __DIR__.'/auth.php';
