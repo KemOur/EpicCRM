@@ -36,7 +36,15 @@
                 <div style="float: left">
                     <a href="{{ route('admin.addlead') }}">
                         <div>
-                            <button class="btn btn-primary" type="button">Ajouter un lead</button>
+                            <button class="btn btn-outline-info" type="button">Ajouter un lead</button>
+                        </div>
+                    </a>
+                </div>
+
+                <div style="float: left; margin-left: 10px">
+                    <a href="#">
+                        <div>
+                            <button type="button" class="btn btn-outline-dark">Importer</button>
                         </div>
                     </a>
                 </div>
