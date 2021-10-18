@@ -18,7 +18,6 @@
                     </div>
                     <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
                         <img src="{{asset('./imgs/dashboard.png')}}" alt="image logo" class="image_logo" style="width: 500px; height: 280px">
-
                     </div>
                 </div>
             </div>
