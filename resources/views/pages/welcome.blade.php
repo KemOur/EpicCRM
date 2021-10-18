@@ -1,14 +1,33 @@
 @extends('layouts.main')
 @section('content')
-        <header>
-            @extends("layouts.navigation")
-        </header>
-            <main>
-                <div class="">
-                    <p style="text-align: center; margin: 35px; font-size: 2rem; font-family: Roboto;">
-                        La plateforme CRM simple à utiliser
-                    </p>
+    @extends("layouts.navigation")
+
+    <div class="bg-black py-5" style="background-color: #F8F9FA">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                        <div class="my-5 text-center text-xl-start">
+                            <h1 class="display-5 fw-bolder text-black mb-2">Le crm que vos commerciaux vont aimer remplir !</h1>
+                            <p class="lead fw-normal text-black-50 mb-4">
+                                Pensé pour aider les équipes commerciales à suivre leurs prospects et conclure leurs ventes sans perdre de temps en saisies inutiles.
+                            </p>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                <a class="btn btn-outline-info btn-lg px-4" href="#!">Démarrer votre test gratuitement</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                        <img src="{{asset('./imgs/dashboard.png')}}" alt="image logo" class="image_logo" style="width: 500px; height: 280px">
+
+                    </div>
                 </div>
+            </div>
+        </div>
+
+            <main class="container">
+                    <h4 style="text-align: center; margin: 35px; font-family: Roboto;">
+                        La plateforme CRM simple à utiliser
+                    </h4>
 
                 <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
                     <div class="col">
@@ -65,53 +84,87 @@
                 <hr>
                 <div class="container px-4 py-5" id="icon-grid">
                     <div>
-                        <h5 style="text-align: center; font-size: 1rem;">
+                        <h5 style="text-align: center;">
                             Les fonctionnalités dont vos commerciaux ont réellement besoin !
                         </h5>
-                    </div><br><br>
+                    </div><br>
 
-
-                    <!-- oroor -->
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div class="col">
-                            <div class="card h-100 border-info">
-                                <div class="card-body">
-                                    <h5 class="card-title">Rappels d'activités</h5>
+                    <section class="pt-4">
+                        <div class="px-lg-5">
+                            <!-- Page Features-->
+                            <div class="row gx-lg-5">
+                                <div class="col-lg-6 col-xxl-4 mb-5">
+                                    <div class="card border-0 h-100" style="background-color: #F8F9FA">
+                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
+                                                <i class="bi bi-collection"></i>
+                                            </div>
+                                            <h2 class="fs-4 fw-bold">Rappels d'activités</h2>
+                                            <small class="mb-0">
+                                                Le lorem ipsum est, en imprimerie, une suite de mots sans signification.
+                                            </small>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>     <div class="col">
-                            <div class="card h-100 border-info">
-                                <div class="card-body">
-                                    <h5 class="card-title">Gestion des leads</h5>
+                                <div class="col-lg-6 col-xxl-4 mb-5">
+                                    <div class="card border-0 h-100" style="background-color: #F8F9FA">
+                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
+                                            <h2 class="fs-4 fw-bold">Gestion des leads</h2>
+                                            <small class="mb-0">
+                                                Le lorem ipsum est, en imprimerie, une suite de mots sans signification.
+                                            </small>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>     <div class="col">
-                            <div class="card h-100 border-info">
-                                <div class="card-body">
-                                    <h5 class="card-title">Rapports statistiques</h5>
+                                <div class="col-lg-6 col-xxl-4 mb-5">
+                                    <div class="card border-0 h-100" style="background-color: #F8F9FA">
+                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-card-heading"></i></div>
+                                            <h2 class="fs-4 fw-bold">Rapports statistiques</h2>
+                                            <small class="mb-0">
+                                                Le lorem ipsum est, en imprimerie, une suite de mots sans signification.
+                                            </small>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>     <div class="col">
-                            <div class="card h-100 border-info">
-                                <div class="card-body">
-                                    <h5 class="card-title">Notifications par email</h5>
+                                <div class="col-lg-6 col-xxl-4 mb-5">
+                                    <div class="card border-0 h-100" style="background-color: #F8F9FA">
+                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-bootstrap"></i></div>
+                                            <h2 class="fs-4 fw-bold">Notifications par email</h2>
+                                            <small class="mb-0">
+                                                Le lorem ipsum est, en imprimerie, une suite de mots sans signification.
+                                            </small>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>     <div class="col">
-                            <div class="card h-100 border-info">
-                                <div class="card-body">
-                                    <h5 class="card-title">Suivi de l’activité</h5>
+                                <div class="col-lg-6 col-xxl-4 mb-5">
+                                    <div class="card border-0 h-100" style="background-color: #F8F9FA">
+                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-code"></i></div>
+                                            <h2 class="fs-4 fw-bold">Suivi de l’activité</h2>
+                                            <small class="mb-0">
+                                                Le lorem ipsum est, en imprimerie, une suite de mots sans signification.
+                                            </small>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>     <div class="col">
-                            <div class="card h-100 border-info">
-                                <div class="card-body">
-                                    <h5 class="card-title">Trello</h5>
+                                <div class="col-lg-6 col-xxl-4 mb-5">
+                                    <div class="card border-0 h-100" style="background-color: #F8F9FA">
+                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                                            <h2 class="fs-4 fw-bold">Trello</h2>
+                                            <small class="mb-0">
+                                                Le lorem ipsum est, en imprimerie, une suite de mots sans signification.
+                                            </small>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </section>
                     </div>
-                </div>
 
                 <div class="table-responsive">
                     <table class="table text-center">

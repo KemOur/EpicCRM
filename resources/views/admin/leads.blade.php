@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
-    <div style="background-color: #52cffb" class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
-        <div class="lh-1">
+    <div style="background-color: #52cffb" class="text-white bg-purple rounded shadow-sm">
+        <div class="p-6 bg- border-b border-gray-200">
             <div style="display: flex">
                 <div>
                     <a href="{{ route('admin.dashboard') }}">
@@ -16,10 +16,8 @@
             </div>
         </div>
     </div>
-
-    <div>
         <div class="nav-scroller bg-body shadow-sm">
-            <nav class="nav nav-underline" aria-label="Secondary navigation">
+            <nav class="container nav nav-underline" aria-label="Secondary navigation">
                 <a class="nav-link active" href="{{ route('admin.dashboard') }}">Dashboard</a>
                 <a class="nav-link" href="#">Leads</a>
                 <a class="nav-link active" href="{{ route('admin.users') }}">Utilisateurs</a>
@@ -32,9 +30,8 @@
             </ul>
         @endif
 
-
+    <div class="container">
         <div class="row align-items-md-stretch">
-
             <div style="">
                 <div style="float: left">
                     <a href="{{ route('admin.addlead') }}">
@@ -42,13 +39,6 @@
                             <button class="btn btn-primary" type="button">Ajouter un lead</button>
                         </div>
                     </a>
-                </div>
-
-                <div style="float: right">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Rechercher</span>
-                        <input type="search" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
                 </div>
             </div>
 

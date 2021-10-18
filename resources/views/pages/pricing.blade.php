@@ -166,7 +166,6 @@
                              Formation des Administrateurs à l'usage de noCRM et à la gestion du compte : équipes, reporting, personnalisation.
                              <hr>
                              Formation Utilisateurs pour une prise en main efficace de noCRM, basée sur votre processus de vente - de la qualification de contacts à la gestion d’opportunités qualifiées et au closing.
-                            </p>
                         </div>
                     </div>
                 </div>

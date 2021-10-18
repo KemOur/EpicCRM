@@ -1,20 +1,24 @@
 @extends('layouts.main')
 @section('content')
-
-    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-        <div class="p-6 bg-white border-b border-gray-200">
+    <div class="bg- overflow-hidden shadow-sm sm:rounded-lg" style="background-color: #52cffb">
+        <div class="p-6 bg- border-b border-gray-200">
             @if (auth()->check() && auth()->user()->id)
                 <div class="d-flex justify-content-between">
-                    <a href="{{ route('admin.dashboard') }}">
+                    <div style="display: flex">
                         <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                            </svg>
+                            <a href="{{ route('admin.dashboard') }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="26" fill="currentColor" style="color: #ffffff" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                </svg>
+                            </a>
                         </div>
-                    </a>
+                        <div>
+                            <p style="color: #ffffff">revenir</p>
+                        </div>
+                    </div>
                     <div>
                         @if (auth()->check() && auth()->user()->id)
-                            <h6>Espace de travail {{auth()->user()->firstname}}</h6>
+                            <h6 style="color: #ffffff">Administrateur {{auth()->user()->firstname}}</h6>
                         @else
                         @endif
                     </div>
@@ -27,7 +31,7 @@
 
     <div>
         <div class="nav-scroller bg-body shadow-sm">
-            <nav class="nav nav-underline" aria-label="Secondary navigation">
+            <nav class="container nav nav-underline" aria-label="Secondary navigation">
                 <a class="nav-link active" href="{{ route('admin.dashboard') }}">Dashboard</a>
                 <a class="nav-link active" href="{{ route('admin.leads') }}">Leads</a>
                 <a class="nav-link active" href="{{ route('admin.users') }}">Utilisateurs</a>
@@ -39,7 +43,7 @@
                 <li style="background-color: mediumseagreen; color: white; text-align: center"><small>{{ session('success') }}</small></li>
             </ul>
         @endif
-
+        <div class="container">
 
         <div class="row align-items-md-stretch">
 
@@ -112,6 +116,7 @@
 
         </div>
     </div>
+</div>
 
 
 @endsection

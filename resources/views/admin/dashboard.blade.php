@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('content')<br>
+@section('content')
     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
         <div class="p-6 border-b border-gray-200" style="background-color: #52cffb">
             @if (auth()->check() && auth()->user()->id)
@@ -11,6 +11,7 @@
                             </svg>
                         </div>
                     </a>
+
                     <div>
                         @if(auth()->check() && auth()->user()->id)
                             <form method="POST" action="{{ route('logout') }}">
@@ -30,16 +31,15 @@
         </div>
     </div>
 
-    <div>
         <div class="nav-scroller bg-body shadow-sm">
-            <nav class="nav nav-underline" aria-label="Secondary navigation">
+            <nav class="container nav nav-underline" aria-label="Secondary navigation">
                 <a class="nav-link active" href="{{ route('admin.dashboard') }}">Dashboard</a>
                 <a class="nav-link active" href="{{ route('admin.leads') }}">Leads</a>
                 <a class="nav-link active" href="{{ route('admin.users') }}">Utilisateurs</a>
             </nav>
         </div>
         <br>
-
+    <div class="container">
         <div class="row align-items-md-stretch">
             <div class="col-md-6">
                 <div class="h-100 p-5 text-white bg-dark rounded-3">

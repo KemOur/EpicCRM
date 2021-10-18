@@ -15,7 +15,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
 
                     @if (auth()->check() && auth()->user()->id)
-                        <h5>Espace de travail {{auth()->user()->firstname}}</h5>
+                        <h5>Commercial {{auth()->user()->firstname}}</h5>
                     @else
                     @endif
 
@@ -39,7 +39,7 @@
                     <div class="col-md-3 themed-grid-col">
                         <div class="my-3 p-3 bg-body rounded shadow-sm">
                             <h6 class="border-bottom pb-2 mb-0">
-                                À faire
+                                Entrant
                                 <hr class="bg-info">
                                 <br>
                                 <br>
