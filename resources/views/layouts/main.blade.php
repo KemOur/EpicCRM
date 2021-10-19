@@ -63,9 +63,9 @@
             }*/
 
 
-            .container {
+            /*.container {
                 max-width: 1060px;
-            }
+            }*/
 
 
             .pricing-header {
@@ -94,8 +94,8 @@
                 "sZeroRecords":   "Aucun résultat trouvé",
                 "sEmptyTable":    "Aucune donnée disponible dans ce tableau",
                 "sInfo":          "_TOTAL_ Leads disponibles",
-                "sInfoEmpty":     "Actuelement vous n'avez aucun lead de disponible",
-                "sInfoFiltered":  "(filtré sur un total de _MAX_ leads)",
+                "sInfoEmpty":     "Votre recherche ne correspond avec aucun résultat !",
+                "sInfoFiltered":  "vous avez un total de _MAX_ leads",
                 "sInfoPostFix":   "",
                 "sUrl":           "",
                 "sInfoThousands":  ",",
