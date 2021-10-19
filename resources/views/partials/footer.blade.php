@@ -1,4 +1,6 @@
-<footer class="pt-4 my-md-5 pt-md-5 border-top">
+<footer class="pt-14 my-md-10 pt-md-15 border-top" style="background-color: #F8F9FA">
+    <div class="container">
+
     <div class="row">
         <div class="col-12 col-md">
             <img class="mb-2" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="24" height="19">
@@ -26,5 +28,8 @@
             </ul>
         </div>
     </div>
+    </div>
+
+    <br>
+    <br>
 </footer>
-</div>

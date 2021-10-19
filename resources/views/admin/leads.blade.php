@@ -21,6 +21,7 @@
                 <a class="nav-link active" href="{{ route('admin.dashboard') }}">Dashboard</a>
                 <a class="nav-link" href="#">Leads</a>
                 <a class="nav-link active" href="{{ route('admin.users') }}">Utilisateurs</a>
+
             </nav>
         </div>
         <br>
@@ -32,21 +33,13 @@
 
     <div class="container">
         <div class="row align-items-md-stretch">
-            <div style="">
-                <div style="float: left">
-                    <a href="{{ route('admin.addlead') }}">
-                        <div>
-                            <button class="btn btn-outline-info" type="button">Ajouter un lead</button>
-                        </div>
-                    </a>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <div>
+                    <a href="{{ route('admin.addlead') }}"> <button class="btn btn-outline-info" type="button">Ajouter un lead</button> </a>
                 </div>
 
-                <div style="float: left; margin-left: 10px">
-                    <a href="#">
-                        <div>
-                            <button type="button" class="btn btn-outline-dark">Importer</button>
-                        </div>
-                    </a>
+                <div>
+                    <button type="button" class="btn btn-outline-dark">Importer</button>
                 </div>
             </div>
 
