@@ -15,16 +15,19 @@ class LeadsController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $leads = Lead::all();
-        /*
-        dd($leads);
-        die();
-        */
-        return view('admin.leads', compact('leads'));
-
+        if ($request->user()->is_admin) {
+            $leads = Lead::all();
+            /*
+            dd($leads);
+            die();
+            */
+            return view('admin.leads', compact('leads'));
+        } else {
+            return redirect()->route('commercial.dashboard');
+        }
     }
 
     /**

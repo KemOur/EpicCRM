@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class CommercialController extends Controller
@@ -9,13 +10,19 @@ class CommercialController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function index()
+    public function index(Request $request)
     {
         //----Commercial dashboard-----///
-        return view('commercial.dashboard');
+        if ($request->user()->is_admin) {
+            $user = User::get();
+            return view('admin.dashboard', ['userlist' => $user]);
+        } else {
+            return view('commercial.dashboard');
+        }
     }
+
 
     /**
      * Show the form for creating a new resource.

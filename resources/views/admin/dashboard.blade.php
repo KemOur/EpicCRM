@@ -106,6 +106,8 @@
                     @endif
                 </a>
                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                    <li><a class="dropdown-item" href="#"> Profile </a> </li>
+                    <hr>
                     <li><a class="dropdown-item" href="#">
 
                             @if(auth()->check() && auth()->user()->id)
@@ -132,18 +134,14 @@
             <div>
                 <div class="nav-scroller bg-body shadow-sm">
                     <nav class="container nav nav-underline" aria-label="Secondary navigation">
-                        <a class="nav-link active" href="{{ route('commercial.dashboard') }}">Commercial-dashboard</a>
+                        <a class="nav-link active" href="{{ route('admin.dashboard') }}">Dashboard </a>
                         <a class="nav-link active" href="{{ route('admin.leads') }}">Leads</a>
                         <a class="nav-link active" href="{{ route('admin.users') }}">Utilisateurs</a>
                     </nav>
                 </div>
             </div>
 
-
-
-
             <div class="container row" style="width: 100%;margin-left: 5%;margin-top: 5%;">
-                <!-- Earnings (Monthly) Card Example -->
                 <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card border-left-primary shadow h-100 py-2">
                         <div class="card-body">
@@ -153,15 +151,11 @@
                                         Entrant</div>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">400.000€</div>
                                 </div>
-                                <div class="col-auto">
-                                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Earnings (Monthly) Card Example -->
                 <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card border-left-success shadow h-100 py-2">
                         <div class="card-body">
@@ -171,15 +165,11 @@
                                         Gagné</div>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">215.000€</div>
                                 </div>
-                                <div class="col-auto">
-                                    <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Earnings (Monthly) Card Example -->
                 <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card border-left-info shadow h-100 py-2">
                         <div class="card-body">
@@ -193,15 +183,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-auto">
-                                    <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Pending Requests Card Example -->
                 <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card border-left-warning shadow h-100 py-2">
                         <div class="card-body">
@@ -211,13 +197,11 @@
                                         Perdu</div>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
                                 </div>
-                                <div class="col-auto">
-                                    <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
 
             <div class="d-flex">
                 <div class=" p-5 text-white bg-dark">
@@ -238,8 +222,7 @@
                     </a>
                 </div>
             </div>
-            </div>
-
+           </div>
         </div>
     </div>
 
