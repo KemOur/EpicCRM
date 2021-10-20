@@ -63,9 +63,9 @@
             }*/
 
 
-            /*.container {
+            .container {
                 max-width: 1060px;
-            }*/
+            }
 
 
             .pricing-header {
@@ -113,5 +113,6 @@
             }
         });
     } );
+
 </script>
 </body>
