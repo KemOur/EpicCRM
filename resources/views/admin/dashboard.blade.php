@@ -80,7 +80,7 @@
 
                     <div class="collapse" id="dashboard-collapse" style="margin-left: 50px">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="#" class="link-dark rounded" style="color: #ffffff">Tous les leads</a></li>
+                            <li><a href="{{ route('admin.leads') }}" class="link-dark rounded" style="color: #ffffff">Tous les leads</a></li>
                             <li><a href="#" class="link-dark rounded" style="color: #ffffff">Entrant</a></li>
                             <li><a href="#" class="link-dark rounded" style="color: #ffffff">Devis envoyé</a></li>
                             <li><a href="#" class="link-dark rounded" style="color: #ffffff">Gagné</a></li>
@@ -209,7 +209,7 @@
                     <p>
                         Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée                </p>
                     <a href="{{ route('admin.leads') }}">
-                        <button class="btn btn-outline-light" type="button">Leads</button>
+                        <button class="btn btn-light" type="button">Leads</button>
                     </a>
                 </div>
 

@@ -80,7 +80,7 @@
 
                     <div class="collapse" id="dashboard-collapse" style="margin-left: 50px">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="#" class="link-dark rounded" style="color: #ffffff">Tous les leads</a></li>
+                            <li><a href="{{ route('admin.leads') }}" class="link-dark rounded" style="color: #ffffff">Tous les leads</a></li>
                             <li><a href="#" class="link-dark rounded" style="color: #ffffff">Entrant</a></li>
                             <li><a href="#" class="link-dark rounded" style="color: #ffffff">Devis envoyé</a></li>
                             <li><a href="#" class="link-dark rounded" style="color: #ffffff">Gagné</a></li>
