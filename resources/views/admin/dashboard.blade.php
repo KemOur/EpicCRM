@@ -54,8 +54,6 @@
                 <hr style="color: #ffffff">
 
 
-
-
                 <li class="mb-1">
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
                         <a class="nav-link link-dark" href="#" style="color: #ffffff">
@@ -100,7 +98,7 @@
                          1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 4h-1.79c.097.324.17.658.22 1z" style="color: #ffffff"/>
                     </svg>
                     @if (auth()->check() && auth()->user()->id)
-                        <h5 style="color: #ffffff"> {{auth()->user()->firstname}}</h5>
+                        <h6 style="color: #ffffff"> {{auth()->user()->firstname}}</h6>
                     @else
                     @endif
                 </a>

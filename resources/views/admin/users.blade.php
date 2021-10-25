@@ -149,10 +149,10 @@
                     </ul>
                 @endif
 
-                <div style="background-color: #ffffff;" class="container">
+                <div style="background-color: #ffffff;margin: 10px" class="">
                 <br>
                 <div style="margin: 10px">
-                    <div class="row align-items-md-stretch">
+                    <div  style="margin: 10px" class="row align-items-md-stretch">
                         <div>
                             <a href="{{ route('admin.adduser') }}">
                                 <div>
