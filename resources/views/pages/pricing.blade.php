@@ -124,9 +124,11 @@
             <br>
             <br>
             <div class="bg-light p-5 rounded mt-3">
-                <h5>Accompagnement Premium en ligne à partir de 900€ </h5>
-                <p class="lead">Cette offre est divisée en 4 étapes : Analyse, Formation, Livrables et Suivi Client.</p>
-                <a class="w-30 btn btn-lg btn-outline-info" href="/docs/5.1/components/navbar/" role="button">Contactez-nous »</a>
+                <h5 style="text-align: center">Accompagnement Premium en ligne à partir de 900€ </h5>
+                <p style="text-align: center" class="lead">Cette offre est divisée en 4 étapes : Analyse, Formation, Livrables et Suivi Client.</p>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn" style="background-color: #65d353; color: #ffffff" type="button">Contacter</button>
+                </div>
             </div>
             <br>
 
@@ -207,7 +209,9 @@
                     <br>
                     <div class="bg-light p-5 rounded mt-3">
                         <h6>Formation des Administrateurs à l'usage de noCRM et à la gestion du compte : équipes, reporting, personnalisation. </h6><br>
-                        <a class="w-30 btn btn-lg btn-outline-info" href="/docs/5.1/components/navbar/" role="button">Démarrer votre test gratuit »</a>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn" style="background-color: #65d353; color: #ffffff" type="button">Test Gratuit</button>
+                        </div>
                     </div>
                 </div>
             </div>

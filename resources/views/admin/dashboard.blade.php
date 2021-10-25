@@ -19,10 +19,9 @@
                 </div>
                 <hr style="color: #ffffff">
 
-
                 <li class="mb-1">
-                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                        <a href="#" class="nav-link link-dark" style="color: #ffffff">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse-a" aria-expanded="false">
+                        <a class="nav-link link-dark" style="color: #ffffff">
                             <div>
                                 <div style="float: left; display: flex; margin-right: 10px; margin-top: 4px">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
@@ -44,7 +43,7 @@
                         </a>
                     </button>
 
-                    <div class="collapse" id="dashboard-collapse" style="margin-left: 50px">
+                    <div class="collapse" id="dashboard-collapse-a" style="margin-left: 50px">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li><a href="{{ route('admin.users') }}" class="link-dark rounded" style="color: #ffffff">Tout les utilisateurs</a></li>
                             <li><a href="#" class="link-dark rounded" style="color: #ffffff">Administrateurs</a></li>
@@ -205,20 +204,20 @@
 
             <div class="d-flex">
                 <div class=" p-5 text-white bg-dark">
-                    <p>Administration des leads</p>
+                    <p>GÉRER LEADS</p>
                     <p>
                         Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée                </p>
                     <a href="{{ route('admin.leads') }}">
-                        <button class="btn btn-light" type="button">Leads</button>
+                        <button class="btn btn-light" type="button">Liste des leads</button>
                     </a>
                 </div>
 
                 <div class=" p-5 text-white" style="background-color: #a0aec0; margin-left: 10px">
-                    <p>Administration des utilisateurs</p>
+                    <p>GÉRER COMMERCIAUX</p>
                     <p>
                         Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée                </p>
                     <a href="{{ route('admin.users') }}">
-                        <button class="btn btn-outline-light" type="button">Utilisateurs</button>
+                        <button class="btn btn-outline-light" type="button">Liste des commerciaux</button>
                     </a>
                 </div>
             </div>

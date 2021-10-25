@@ -6,9 +6,9 @@
         </header>
         <div class="container">
             <main>
-                    <p style="text-align: center; margin-top: 45px; font-size: 1.5rem; font-family: Roboto;">
+                    <h2 style="text-align: center; margin-top: 45px; font-size: 2.2rem; font-family: Roboto;">
                         Des fonctionnalités adaptées à vos besoins commerciaux.
-                    </p>
+                    </h2>
                 <br>
                 <br>
                 <div class="row featurette">
