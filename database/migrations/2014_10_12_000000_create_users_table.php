@@ -38,7 +38,7 @@ class CreateUsersTable extends Migration
             'firstname' => $firstname,
             'lastname' => $lastname,
             'email' => $email,
-            'password' => Hash::make('Password123!'),
+            'password' => Hash::make('Password12345!'),
             'is_admin' => true,
         ]);
     }

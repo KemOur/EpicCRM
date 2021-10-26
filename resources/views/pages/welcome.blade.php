@@ -2,7 +2,7 @@
 @section('content')
     @extends("layouts.navigation")
 
-    <div class="bg-black py-5" style="background-image: url('./imgs/bh.jpg'); ">
+    <div class="bg-black py-5" style="background-image: url('./imgs/bh.jpg')">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center justify-content-center">
                     <div class="col-lg-8 col-xl-7 col-xxl-6">
@@ -25,28 +25,28 @@
 
             <main class="" style="background-color: #FBFDFF">
                 <div class="container-fluid py-5"><br>
-                    <h2 style="text-align: center;font-size: 53px;"> Qu'est-ce que le CRM ? </h2>
+                    <h3 style="text-align: center;font-size: 53px;"> Qu'est-ce que le CRM ? </h3>
                 </div>
 
                 <div class="container">
 
                 <div class=" row">
                     <div class="col-md-4">
-                        <h2>Le problème des CRMs</h2>
+                        <h4>Le problème des CRMs</h4>
                         <p>
                             Les CRMs se concentrent sur l'organisation de la donnée, mais vendre ce n'est pas trier. Vendre est un processus qui démarre avec un prospect et doit finir avec un client.
                             Des indicateurs clés pour les manageurs et des fonctionnalités de collaboration pour bâtir la meilleure équipe commerciale.
                         </p>
                     </div>
                     <div class="col-md-4">
-                        <h2>Notre solution</h2>
+                        <h4>Notre solution</h4>
                         <p>
                             noCRM.io est une solution de suivi des opportunités commerciale basée sur les prochaines actions (relance email, appel, visite ...). Son but est d'aider vos équipes commerciales à se concentrer sur leur objectif principal, convertir les prospects en clients.
                             Créez facilement des opportunités depuis de multiples sources comme LinkedIn ou des cartes de visite. Diminuez le temps passé sur des formulaires et commencez à travaillez vos prospects tout de suite !
                         </p>
                     </div>
                     <div class="col-md-4">
-                        <h2>Est-ce pour vous ?</h2>
+                        <h4>Est-ce pour vous ?</h4>
                         <p>
                             noCRM.io est l'outil idéal pour les TPE/PME qui cherchent un outil simple et efficace pour organiser leur prospection commerciale. Grâce à ses différentes éditions il convient au 1er commercial comme à des équipes de vente de 100 personnes
                             noCRM.io est un logiciel en SaaS, il ne nécessite ni installation ni maintenance. Votre compte est accessible en ligne, à n'importe quel moment, où que vous soyez.
@@ -280,10 +280,8 @@
                     </table>
                 </div>
                 </div>
+                <br>
+                <br>
             </main>
-<br>
-<br>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
     @include('partials.footer')
 @endsection

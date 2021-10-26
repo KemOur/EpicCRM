@@ -21,8 +21,8 @@
 
 
                 <li class="mb-1">
-                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                        <a href="#" class="nav-link link-dark" style="color: #ffffff">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse-a" aria-expanded="false">
+                        <a class="nav-link link-dark" style="color: #ffffff">
                             <div>
                                 <div style="float: left; display: flex; margin-right: 10px; margin-top: 4px">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
@@ -44,7 +44,7 @@
                         </a>
                     </button>
 
-                    <div class="collapse" id="dashboard-collapse" style="margin-left: 50px">
+                    <div class="collapse" id="dashboard-collapse-a" style="margin-left: 50px">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li><a href="{{ route('admin.users') }}" class="link-dark rounded" style="color: #ffffff">Tout les utilisateurs</a></li>
                             <li><a href="#" class="link-dark rounded" style="color: #ffffff">Administrateurs</a></li>
@@ -53,8 +53,6 @@
                     </div>
                 </li>
                 <hr style="color: #ffffff">
-
-
 
 
                 <li class="mb-1">
@@ -91,7 +89,6 @@
                 </li>
             </ul>
             <hr>
-
             <div class="dropdown">
                 <a href="#" style="margin-right: 30px" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-square" viewBox="0 0 16 16">
@@ -128,8 +125,6 @@
         </div>
         <!-- end sidebar -->
 
-
-
         <div class="col-md-6" style="width: 84%;background-color: #F8F9FC;">
             <div>
 
@@ -160,12 +155,16 @@
                         </div>
 
                         <div>
-                            <button type="button" class="btn btn-secondary btn-sm" style="margin-right: 10px">Importer</button>
+                            <form method="POST" enctype="multipart/form-data" action="{{route('admin.import')}}">
+                                @csrf
+                                <div class="d-flex form-group">
+                                    <input class="form-control form-control-sm" name="file" id="formFileSm" type="file">
+                                    <button type="submit" class="btn btn-secondary btn-sm" style="margin-left: 10px">Importer</button>
+                                </div>
+                            </form>
                         </div>
-                    </div>
 
-                    <br>
-                    <br>
+                    </div> <br> <br>
                     <hr>
 
                     <table id="id_lead" class="display table table-striped">
@@ -185,7 +184,7 @@
                         </thead>
 
                         <tbody>
-                        @if($leads->isNotEmpty())
+                        @if(auth()->check() && auth()->user()->is_admin)
                             @foreach($leads as $lead)
                                 <tr>
                                     <td><small>{{ $lead->client }}</small></td>
@@ -228,17 +227,16 @@
                                     </td>
                                 </tr>
                             @endforeach
-                        @else
-                            <li>There is no leads in database</li>
+                            @else
+                            <div class="alert alert-info" role="alert">
+                                <small>Vous n'avez aucun lead de disponible</small>
+                            </div>
                         @endif
                         </tbody>
                     </table>
+                    </div> <br> <br>
                 </div>
-                    <br>
-                    <br>
-            </div>
             </div>
         </div>
     </div>
-
 @endsection

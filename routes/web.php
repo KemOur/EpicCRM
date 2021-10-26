@@ -90,4 +90,7 @@ Route::group(['middleware' => 'auth'], function() {
         Route::get('dashboard/admin/editlead/{id}', [\App\Http\Controllers\LeadsController::class, 'edit' ]) ->middleware('auth')->name('admin.edit');
         Route::put('dashboard/admin/editlead/store/{id}', [\App\Http\Controllers\LeadsController::class, 'update' ])->middleware('auth')->name('admin.update');
 
+
+        Route::post('dashboard/admin/leads', [\App\Http\Controllers\LeadsController::class, 'import' ])->middleware('auth')->name('admin.import');
+
 require __DIR__.'/auth.php';

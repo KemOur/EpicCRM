@@ -7,6 +7,9 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Excel;
+use App\Imports\LeadImport;
+
 
 class LeadsController extends Controller
 {
@@ -18,8 +21,8 @@ class LeadsController extends Controller
     public function index(Request $request)
     {
         //
+        $leads = Lead::all();
         if ($request->user()->is_admin) {
-            $leads = Lead::all();
             /*
             dd($leads);
             die();
@@ -83,6 +86,22 @@ class LeadsController extends Controller
 
         return redirect()->route('admin.leads')->with('success', 'Un lead viens d\'être ajouté avec succés');
         //return redirect(route('admin/users'));
+    }
+
+
+    //-------IMPORT LEAD FORM EXCEL FILE-------//
+    public function import(Request $request) {
+        $leads = Lead::all();
+        Excel::import(new LeadImport, $request->file);
+        if ($request->user()->is_admin) {
+            /*
+            dd($leads);
+            die();
+            */
+            return view('admin.leads', compact('leads'));
+        } else {
+            return redirect()->route('commercial.dashboard');
+        }
     }
 
     /**
