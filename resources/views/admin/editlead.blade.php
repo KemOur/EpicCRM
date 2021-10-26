@@ -200,14 +200,7 @@
 
                 <label for="phone" class="form-label">Téléphone</label>
                 <div class="input-group mb-3">
-                    <input type="number"
-                           class="form-control"
-                           placeholder=""
-                           id="phone"
-                           value="{{$lead->phone}}"
-                           name="phone"
-                           aria-label="phone"
-                           aria-describedby="basic-addon1">
+                    <input type="number" class="form-control" placeholder="xx-xx-xx-xx-xx" id="phone" value="{{$lead->phone}}" name="phone" aria-label="phone" aria-describedby="basic-addon1" style="margin-left: 5px">
                 </div>
                 @error('phone')
                 {{$message}}
@@ -217,12 +210,11 @@
                 <label for="description">Description</label>
                 <div class="form-floating">
                     <input name="description"
-                              class="form-control"
-                              placeholder="Écrivez un commentaire ci-dessus"
-                              id="description"
-                              value="{{$lead->description }}"
-                              style="height: 100px">
-
+                     class="form-control"
+                     placeholder="Écrivez un commentaire ci-dessus"
+                     id="description"
+                     value="{{$lead->description }}"
+                     style="height: 100px">
                 </div>
                 @error('description')
                 {{$message}}

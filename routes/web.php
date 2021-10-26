@@ -86,11 +86,14 @@ Route::group(['middleware' => 'auth'], function() {
         Route::get('dashboard/admin/show/{id}', [\App\Http\Controllers\LeadsController::class, 'show' ]) ->middleware('auth')->name('admin.show');
         //---DELETE---//
         Route::delete('dashboard/admin/destroy/{id}', [\App\Http\Controllers\LeadsController::class, 'destroy'])->middleware('auth') ->name('admin.destroy');
-        //-EDITION-FORM and edit-//
+        //--EDITION-FORM and edit--//
         Route::get('dashboard/admin/editlead/{id}', [\App\Http\Controllers\LeadsController::class, 'edit' ]) ->middleware('auth')->name('admin.edit');
         Route::put('dashboard/admin/editlead/store/{id}', [\App\Http\Controllers\LeadsController::class, 'update' ])->middleware('auth')->name('admin.update');
 
-
+        //--IMPORT EXCEL FILE--//
         Route::post('dashboard/admin/leads', [\App\Http\Controllers\LeadsController::class, 'import' ])->middleware('auth')->name('admin.import');
+        //--EXPORT EXCEL/CSV FILE--//
+        Route::get('dashboard/admin/leads/export-excel', [\App\Http\Controllers\LeadsController::class, 'exportIntoExcel' ])->middleware('auth')->name('admin.exportIntoExcel');
+        Route::get('dashboard/admin/leads/export-csv', [\App\Http\Controllers\LeadsController::class, 'exportIntoCSV' ])->middleware('auth')->name('admin.exportIntoCSV');
 
 require __DIR__.'/auth.php';

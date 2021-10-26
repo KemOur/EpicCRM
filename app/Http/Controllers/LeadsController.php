@@ -7,8 +7,9 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Excel;
 use App\Imports\LeadImport;
+use App\Exports\LeadExport;
+use Excel;
 
 
 class LeadsController extends Controller
@@ -104,6 +105,14 @@ class LeadsController extends Controller
         }
     }
 
+    public function exportIntoExcel(){
+        return Excel::download(new LeadExport, 'leads.xlsx');
+    }
+
+    public function exportIntoCSV(){
+        return Excel::download(new LeadExport, 'leads.csv');
+    }
+
     /**
      * Display the specified resource.
      *
@@ -120,9 +129,7 @@ class LeadsController extends Controller
             return view('admin.showlead', compact('user', 'lead', 'leads'));
         } else {
             return redirect()->route('commercial.dashboard');
-
         }
-
     }
 
     /**
