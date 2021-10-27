@@ -144,16 +144,14 @@
 
             <br>
             <div style="background-color: #ffffff;margin: 10px;">
-                <br>
                 <div class="" style="margin: 10px">
                 <div class="row align-items-md-stretch">
-                    <div class="">
-                        <a href="{{ route('admin.addlead') }}">
-                            <button type="button" class="btn btn-primary btn-sm float-left">Ajouter un lead</button>
-                        </a>
-                    </div>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: 10px">
+                        <div class="">
+                            <a href="{{ route('admin.addlead') }}">
+                                <button type="button" class="btn btn-primary btn-sm float-left">Ajouter un lead</button>
+                            </a>
+                        </div>
 
                         <div>
                             <form method="POST" enctype="multipart/form-data" action="{{route('admin.import')}}">
