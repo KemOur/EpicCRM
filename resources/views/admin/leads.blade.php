@@ -147,12 +147,13 @@
                 <br>
                 <div class="" style="margin: 10px">
                 <div class="row align-items-md-stretch">
+                    <div class="">
+                        <a href="{{ route('admin.addlead') }}">
+                            <button type="button" class="btn btn-primary btn-sm float-left">Ajouter un lead</button>
+                        </a>
+                    </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <div>
-                            <a href="{{ route('admin.addlead') }}">
-                                <button type="button" class="btn btn-primary btn-sm">Ajouter un lead</button>
-                            </a>
-                        </div>
+
 
                         <div>
                             <form method="POST" enctype="multipart/form-data" action="{{route('admin.import')}}">
@@ -162,6 +163,10 @@
                                     <button type="submit" class="btn btn-secondary btn-sm" style="margin-left: 10px">Importer</button>
                                 </div>
                             </form>
+                        </div>
+
+                        <div class="">
+                            <a type="button" class="btn btn-info btn-sm" style="color: #ffffff; display: flex" href="{{route ('admin.exportIntoExcel')}}">Exporter</a>
                         </div>
 
                     </div> <br> <br>

@@ -23,10 +23,10 @@ class Lead extends Model
         'description',
     ];
 
-    public static function getLead()
+    /*public static function getLead()
     {
         $records = DB::table('leads')->select('id','date','client','company','coast','origin','state','email','phone','description');
         return $records;
-    }
+    }*/
 
 }
