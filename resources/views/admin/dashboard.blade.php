@@ -4,7 +4,7 @@
 <!-- sidebar -->
     <div class="d-flex" style="height: 100vh;">
         <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 16%; background-color: #4e73df">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                 <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
                 <span class="fs-4" style="color: #ffffff">EpicCRM</span>
             </a>

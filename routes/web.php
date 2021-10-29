@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\LeadsController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
@@ -17,7 +18,9 @@ use App\Http\Controllers\LostController;
 
 /*--------WELCOME---------*/
 
-Route::get('/', function () { return view('pages.welcome');});
+//Route::get('/', function () { return view('pages.welcome');});
+Route::get('/',  [HomepageController::class, 'index'])->name('pages.welcome');
+
 
 /*--------FEATURES---------*/
 

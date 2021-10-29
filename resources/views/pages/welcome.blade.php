@@ -72,8 +72,8 @@
                             <div class="row gx-lg-5">
                                 <div class="col-lg-6 col-xxl-4 mb-5">
                                     <div class="card border-0 h-100" style="background-color: #F8F9FA">
-                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                            <div class="">
+                                        <div class="card-body text-center p-4 p-lg-5 py-4">
+                                            <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="56" style="color: #2288e4" height="56" fill="currentColor" class="bi bi-app-indicator" viewBox="0 0 16 16">
                                                     <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z"/>
                                                     <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
@@ -88,8 +88,8 @@
                                 </div>
                                 <div class="col-lg-6 col-xxl-4 mb-5">
                                     <div class="card border-0 h-100" style="background-color: #F8F9FA">
-                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                            <div class="">
+                                        <div class="card-body text-center p-4 p-lg-5 py-4">
+                                            <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="56" style="color: #2288e4" height="56" fill="currentColor" class="bi bi-view-list" viewBox="0 0 16 16">
                                                     <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
                                                 </svg>
@@ -103,8 +103,8 @@
                                 </div>
                                 <div class="col-lg-6 col-xxl-4 mb-5">
                                     <div class="card border-0 h-100" style="background-color: #F8F9FA">
-                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                            <div class="">
+                                        <div class="card-body text-center p-4 p-lg-5 py-4">
+                                            <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="56" style="color: #2288e4" height="56" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
                                                     <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"/>
                                                 </svg>
@@ -118,8 +118,8 @@
                                 </div>
                                 <div class="col-lg-6 col-xxl-4 mb-5">
                                     <div class="card border-0 h-100" style="background-color: #F8F9FA">
-                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                            <div class="">
+                                        <div class="card-body text-center p-4 p-lg-5 py-4">
+                                            <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg"  width="56" style="color: #2288e4" height="56" fill="currentColor" class="bi bi-envelope-open" viewBox="0 0 16 16">
                                                     <path d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.818l5.724 3.465L8 8.917l1.276.766L15 6.218V5.4a1 1 0 0 0-.53-.882l-6-3.2zM15 7.388l-4.754 2.877L15 13.117v-5.73zm-.035 6.874L8 10.083l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738zM1 13.117l4.754-2.852L1 7.387v5.73zM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2z"/>
                                                 </svg>
@@ -133,8 +133,8 @@
                                 </div>
                                 <div class="col-lg-6 col-xxl-4 mb-5">
                                     <div class="card border-0 h-100" style="background-color: #F8F9FA">
-                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                            <div class="">
+                                        <div class="card-body text-center p-4 p-lg-5 py-4">
+                                            <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="56" style="color: #2288e4" height="56" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
                                                     <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
                                                     <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
@@ -149,8 +149,8 @@
                                 </div>
                                 <div class="col-lg-6 col-xxl-4 mb-5">
                                     <div class="card border-0 h-100" style="background-color: #F8F9FA">
-                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                            <div class="">
+                                        <div class="card-body text-center p-4 p-lg-5 py-4">
+                                            <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="56" style="color: #2288e4" height="56" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16">
                                                     <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
                                                     <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"/>
