@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomepageController extends Controller
 {
@@ -11,14 +12,14 @@ class HomepageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        if ($request->user()->is_admin) {
+        if ( Auth::user()) {
             return view('admin.dashboard');
-        }elseif($request->user()->auth) {
+        }elseif(Auth::user()) {
             return view('commercial.dashboard');
         }else{
-            return redirect()->route('');
+            return view('pages.welcome');
         }
     }
 
