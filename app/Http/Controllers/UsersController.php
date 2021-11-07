@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
@@ -79,16 +80,17 @@ class UsersController extends Controller
         //return redirect(route('admin/users'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+
+    public function profile (Request $request)
     {
-        //
+        if ($request->user()->is_admin) {
+            $user = Auth::user();
+            return view('admin.profile', compact('user'));
+        } else {
+            return redirect()->route('admin.dashboard');
+        }
     }
+
 
     /**
      * Show the form for editing the specified resource.

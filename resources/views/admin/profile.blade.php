@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 
-<!-- sidebar -->
+    <!-- sidebar -->
     <div class="d-flex" style="height: 100vh;">
         <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 20%; background-color: #4e73df">
             <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
@@ -13,32 +13,32 @@
                 <hr style="color: #ffffff">
 
                 <li class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse-a" aria-expanded="false">
-                        <a class="nav-link link-dark" href="{{ route('admin.dashboard') }}" style="color: #ffffff">
-                            <div>
-                                <div style="float: left; display: flex; margin-right: 10px; margin-top: 4px">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-                                        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-                                    </svg>
-                                </div>
-                                <div style="display: flex;"> <p> Tableau de bord </p> </div>
+                    <a class="nav-link link-dark" href="{{ route('admin.dashboard') }}" style="color: #ffffff">
+                        <div>
+                            <div style="float: left; display: flex; margin-right: 10px; margin-top: 4px">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                                </svg>
                             </div>
-                        </a>
-                    </li>
+                            <div style="display: flex;"> <p> Tableau de bord </p> </div>
+                        </div>
+                    </a>
+                </li>
 
-                    <li class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse-a" aria-expanded="false">
-                        <a class="nav-link link-dark" href="{{route('admin.profile')}}" style="color: #ffffff">
-                            <div>
-                                <div style="float: left; display: flex; margin-right: 10px; margin-top: 4px">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-                                    </svg>
-                                </div>
-
-                                <div style="display: flex;"> <p> Profile </p></div>
+                <li class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse-a" aria-expanded="false">
+                    <a class="nav-link link-dark" style="color: #ffffff">
+                        <div>
+                            <div style="float: left; display: flex; margin-right: 10px; margin-top: 4px">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                </svg>
                             </div>
-                        </a>
-                    </li>
+
+                            <div style="display: flex;"> <p> Profile </p></div>
+                        </div>
+                    </a>
+                </li>
 
 
                 <li class="mb-1">
@@ -153,7 +153,7 @@
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
                                     <div type="button" class="btn btn-secondary btn-sm" :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
-                                     <small style="color: #ffffff">{{ __('Déconnexion') }}</small>
+                                        <small style="color: #ffffff">{{ __('Déconnexion') }}</small>
                                     </div>
                                 </form>
                             </li>
@@ -168,7 +168,7 @@
         <div class="col-md-6" style="width: 80%;background-color: #F8F9FC;">
             <div class="" style="background-color: #ffffff">
                 <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom" style="width: 98%">
-                    <div href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                    <div class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
                         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="30" viewBox="0 0 16 16" >
                             <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm12 2H5a1 1 0 0 0-1 1v7h7a1 1 0 0 0 1-1V4z"/>
                         </svg> | EpicCRM
@@ -176,139 +176,69 @@
 
 
                     <div class="col-md-2 text-end">
-                            <div class="nav-scroller bg-body shadow-sm">
-                                <div class="dropdown" >
-                                    <a href="#" style="margin-right: 10px" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" fill="currentColor"
-                                             class="bi bi-circle-square" viewBox="0 0 16 16">
-                                            <path d="M0 6a6 6 0 1 1 12 0A6 6 0 0 1 0 6z" style="color: aquamarine"/>
-                                            <path d="M12.93 5h1.57a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-9a.5.5 0 0
+                        <div class="nav-scroller bg-body shadow-sm">
+                            <div class="dropdown" >
+                                <a href="#" style="margin-right: 10px" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" fill="currentColor"
+                                         class="bi bi-circle-square" viewBox="0 0 16 16">
+                                        <path d="M0 6a6 6 0 1 1 12 0A6 6 0 0 1 0 6z" style="color: aquamarine"/>
+                                        <path d="M12.93 5h1.57a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-9a.5.5 0 0
                                         1-.5-.5v-1.57a6.953 6.953 0 0 1-1-.22v1.79A1.5 1.5 0 0 0 5.5 16h9a1.5
                                         1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 4h-1.79c.097.324.17.658.22 1z" style="color: #ffffff"/>
-                                        </svg>
-                                        @if (auth()->check() && auth()->user()->id)
-                                            <h6 style="margin: 13px"> {{auth()->user()->firstname}}</h6>
-                                        @else
-                                        @endif
-                                    </a>
-                                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                                        <li>
-                                            <a class="dropdown-item" href="{{route('admin.profile')}}"> Profile </a>
-                                        </li>
-                                        <hr>
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                @if(auth()->check() && auth()->user()->id)
-                                                    <form method="POST" action="{{ route('logout') }}">
-                                                        @csrf
-                                                        <button type="button" class="btn btn-dark btn-sm"
-                                                                :href="route('logout')"
-                                                                onclick="event.preventDefault(); this.closest('form').submit();"> <small style="color: #ffffff">{{ __('Déconnexion') }}</small> </button>
-                                                    </form>
-                                                @else
-                                                @endif
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-
+                                    </svg>
+                                    @if (auth()->check() && auth()->user()->id)
+                                        <h6 style="margin: 13px"> {{auth()->user()->firstname}}</h6>
+                                    @else
+                                    @endif
+                                </a>
+                                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                                    <li><a class="dropdown-item" href="#"> Profile </a> </li>
+                                    <hr>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            @if(auth()->check() && auth()->user()->id)
+                                                <form method="POST" action="{{ route('logout') }}">
+                                                    @csrf
+                                                    <button type="button" class="btn btn-dark btn-sm"
+                                                            :href="route('logout')"
+                                                            onclick="event.preventDefault(); this.closest('form').submit();"> <small style="color: #ffffff">{{ __('Déconnexion') }}</small> </button>
+                                                </form>
+                                            @else
+                                            @endif
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
+
                         </div>
+                    </div>
 
                 </header>
             </div>
 
+            <div>
+                @if(session('success'))
+                    <ul>
+                        <li style="background-color: mediumseagreen; color: white; text-align: center"><small>{{ session('success') }}</small></li>
+                    </ul>
+                @endif
 
-            <div class="container row" style="width: 100%;margin-left: 5%;margin-top: 5%;">
-                <div class="col-xl-3 col-md-6 mb-4">
-                    <div class="card border-left-primary shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">LEADS</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">40</div>
-                                </div>
-                                <a type="button" href="{{route('admin.leads')}}"
-                                   style="margin-block: 0;background-color: dodgerblue;
-                                   color: #ffffff">Liste des leads</a>
+                    <br>
+                    <div class="" style="width: 75%;margin-left: 140px;">
+                        <div class=" shadow-sm">
+                                <small class="" style="margin-left: 10px">Détails
+                                    <a href="{{route('admin.edit.user', $user->id )}}" style="margin-left: 20px" type="button" class="btn btn-primary btn-sm">Modifier</a>
+                                </small>
+                            <div class="list-group list-group-checkable"><br>
+                                <label class="list-group-item py-3" for="listGroupCheckableRadios2">
+                                     Prénom :<h4>{{$user->lastname}}</h4>
+                                     Nom :<h4>{{$user->firstname}}</h4>
+                                     Adresse email :<h4>{{ $user->email }}</h4>
+                                </label>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-xl-3 col-md-6 mb-4">
-                    <div class="card border-left-success shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                        Gagné</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">215</div>
-                                </div>
-                                <a type="button" style="margin-block: 0;background-color: green;color: #ffffff">Liste des leads</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-md-6 mb-4">
-                    <div class="card border-left-info shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">À rappeler
-                                    </div>
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col-auto">
-                                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50</div>
-                                        </div>
-                                        <a type="button" style="margin-block: 0;background-color: #FBD146;color: #ffffff">Liste des leads</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-md-6 mb-4">
-                    <div class="card border-left-warning shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                        Perdu</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                </div>
-                                <a type="button" style="margin-block: 0;background-color: #E56874;color: #ffffff">Liste des leads</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            <div class="d-flex">
-                <div class=" p-5 text-white bg-dark">
-                    <p>GÉRER LEADS</p>
-                    <p>
-                        Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée
-                    </p>
-                    <a href="{{ route('admin.leads') }}">
-                        <button type="button" class="btn btn-secondary">Liste des leads</button>
-                    </a>
-                </div>
-
-                <div class=" p-5 text-white" style="background-color: #a0aec0; margin-left: 10px">
-                    <p>GÉRER COMMERCIAUX</p>
-                    <p>
-                        Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée
-                    </p>
-                    <a href="{{ route('admin.users') }}">
-                        <button type="button" class="btn btn-dark">Liste des commerciaux</button>
-                    </a>
-                </div>
             </div>
-           </div>
         </div>
     </div>
-
 @endsection

@@ -14,6 +14,8 @@ class HomepageController extends Controller
      */
     public function index()
     {
+
+        //quand je me connecte avec user->commercial et que j'essaye de redirigier vers la page / -> home ça me redirigi vers le dashboard de l'admin !!!!!
         if ( Auth::user()) {
             return view('admin.dashboard');
         }elseif(Auth::user()) {

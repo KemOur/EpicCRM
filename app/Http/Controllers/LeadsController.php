@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Imports\LeadImport;
 use App\Exports\LeadExport;
-use Excel;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 
 class LeadsController extends Controller

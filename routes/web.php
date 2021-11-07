@@ -64,6 +64,8 @@ Route::group(['middleware' => 'auth'], function() {
 
         //--DASHBOARD ADMIN--//
         Route::get('/dashboard/admin', [\App\Http\Controllers\UsersController::class, 'index'])->middleware('auth')->name('admin.dashboard');
+        //--DASHBOARD PROFILE--//
+        Route::get('/dashboard/admin/profile', [\App\Http\Controllers\UsersController::class, 'profile'])->middleware('auth')->name('admin.profile');
         //----USERS LIST-----//
         Route::get('/dashboard/admin/users', [\App\Http\Controllers\UsersController::class, 'users'])->middleware('auth')->name('admin.users');
         //----ADD FORM USER----//
