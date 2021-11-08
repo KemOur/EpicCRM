@@ -94,7 +94,7 @@ class LeadsController extends Controller
     //-------IMPORT LEAD FORM EXCEL FILE-------//
     public function import(Request $request) {
         $leads = Lead::all();
-        Excel::import(new LeadImport, $request->file);
+        Excel::import(new LeadImport, $request->file('import_file'));
         if ($request->user()->is_admin) {
             /*
             dd($leads);
