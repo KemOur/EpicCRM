@@ -93,6 +93,7 @@ class LeadsController extends Controller
 
     //-------IMPORT LEAD FORM EXCEL FILE-------//
     public function import(Request $request) {
+
         $leads = Lead::all();
         Excel::import(new LeadImport, $request->file('import_file'));
         if ($request->user()->is_admin) {
@@ -100,7 +101,7 @@ class LeadsController extends Controller
             dd($leads);
             die();
             */
-            return view('admin.leads', compact('leads'));
+            return redirect()->back()->with('success', 'L\'importation des votre fichier à été ');
             //return view('admin.leads', compact('leads'));
         } else {
             return redirect()->route('commercial.dashboard');

@@ -12,6 +12,7 @@ class Lead extends Model
     use HasFactory, Notifiable;
 
     protected $fillable = [
+        'id',
         'date',
         'client',
         'company',

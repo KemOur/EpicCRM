@@ -1,8 +1,6 @@
 @extends('layouts.main')
 @section('content')
     @include('layouts.sidebar')
-
-
             <div style="background-color: #ffffff;margin: 10px;">
                 <div class="" style="margin: 10px">
                 <div class="row align-items-md-stretch">
