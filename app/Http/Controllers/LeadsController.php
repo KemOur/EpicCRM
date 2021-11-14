@@ -29,7 +29,7 @@ class LeadsController extends Controller
             dd($leads);
             die();
             */
-            return view('admin.leads', compact('leads'));
+            return view('manager.leads', compact('leads'));
         } else {
             return redirect()->route('commercial.dashboard');
         }

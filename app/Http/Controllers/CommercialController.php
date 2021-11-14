@@ -15,10 +15,7 @@ class CommercialController extends Controller
     public function index(Request $request)
     {
         //----Commercials dashboard-----///
-        if ($request->user()->is_admin) {
-            $user = User::get();
-            return view('admin.dashboard', ['userlist' => $user]);
-        } else {
+        if ($request->user()->role_id == 2) {
             return view('commercial.dashboard');
         }
     }

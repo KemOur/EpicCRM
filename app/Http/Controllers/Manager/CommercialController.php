@@ -16,8 +16,7 @@ class CommercialController extends Controller
     public function index()
     {
         // List commercial leads
-        //$userList = User::get();
-        //return view('manager.dashboard', ['userlist' => $userList]);
+        //return view('commercial.dashboard');
 
     }
 

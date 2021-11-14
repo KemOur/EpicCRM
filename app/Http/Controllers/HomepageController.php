@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -12,17 +13,12 @@ class HomepageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
 
         //quand je me connecte avec user->commercial et que j'essaye de redirigier vers la page / -> home ça me redirigi vers le dashboard de l'admin !!!!!
-        if ( Auth::user()) {
-            return view('admin.dashboard');
-        }elseif(Auth::user()) {
-            return view('commercial.dashboard');
-        }else{
             return view('pages.welcome');
-        }
+
     }
 
     /**

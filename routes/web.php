@@ -44,11 +44,10 @@ Route::get('/about', function () { return view('pages.about');});
 /*-------- [ COMMERCIAL ROUTES ]---------*/
 
 Route::group(['middleware' => 'auth'], function() {
-    //Route::get('/admin',  [AdminUsersController::class, 'index'])->name('admin.dashboard');
 
     //Route::get('/dashboard',  [UsersController::class, 'index'])->name('pages.dashboard');
 
-        Route::get('/dashboard',  [CommercialController::class, 'index'])->name('commercial.dashboard');
+        Route::get('/commercial/dashboard',  [CommercialController::class, 'index'])->name('commercial.dashboard');
         Route::get('/dashboard/todo',  [TodoController::class, 'index'])->name('commercial.todo');
         Route::get('/dashboard/do',  [DoController::class, 'index'])->name('commercial.do');
         Route::get('/dashboard/tocall',  [TocallController::class, 'index'])->name('commercial.tocall');
@@ -58,11 +57,12 @@ Route::group(['middleware' => 'auth'], function() {
 
 
 /*--------------------------------------------------------[ ADMIN ]----------------------------------------------------------------*/
+        Route::get('admin/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->middleware('auth')->name('admin.dashboard');
 
 /*------------[ MANAGER ROUTES ]------------*/
 
         //--DASHBOARD MANAGER--//
-        Route::get('/manager/dashboard', [\App\Http\Controllers\Manager\DashboardController::class, 'index'])->middleware('auth')->name('manager.dashboard');
+        Route::get('manager/dashboard', [\App\Http\Controllers\Manager\DashboardController::class, 'index'])->middleware('auth')->name('manager.dashboard');
         //Route::get('/manager/dashboard', [\App\Http\Controllers\Manager\DashboardController::class, 'index'])->middleware('auth')->name('manager.dashboard');
         //Route::get('/manager/dashboard', [\App\Http\Controllers\UsersController::class, 'index'])->middleware('auth')->name('manager.dashboard');
 

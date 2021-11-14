@@ -6,7 +6,7 @@ use Closure;
 Use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
-class UserMiddleware
+class CommercialMiddleware
 {
     /**
      * Handle an incoming request.
