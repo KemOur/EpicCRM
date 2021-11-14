@@ -16,22 +16,29 @@ class UsersController extends Controller
      */
     public function index(Request $request)
     {
-        if ($request->user()->is_admin) {
+        //if ($request->user()->is_admin) {
             $userList = User::get();
-            return view('admin.dashboard', ['userlist' => $userList]);
-        } else {
+            return view('manager.dashboard', ['userlist' => $userList]);
+        /*
+         } else {
             return redirect()->route('commercial.dashboard');
         }
+        */
     }
 
     public function users(Request $request)
     {
+        /*
         if ($request->user()->is_admin) {
+
+            */
             $userList = User::get();
             return view('admin.users', ['userlist' => $userList]);
+            /*
         } else {
             return redirect()->route('commercial.dashboard');
         }
+            */
     }
 
 
@@ -44,12 +51,16 @@ class UsersController extends Controller
 
     public function adduser(Request $request)
     {
+        /*
         if ($request->user()->is_admin) {
+        */
             $user = User::get();
             return view('admin.adduser', ['userlist' => $user]);
+       /*
         } else {
             return redirect()->route('commercial.dashboard');
         }
+       */
     }
 
     public function store(Request $request)
@@ -83,12 +94,17 @@ class UsersController extends Controller
 
     public function profile (Request $request)
     {
+        /*
         if ($request->user()->is_admin) {
+
+        */
             $user = Auth::user();
             return view('admin.profile', compact('user'));
-        } else {
+    /*
+    } else {
             return redirect()->route('admin.dashboard');
         }
+    */
     }
 
 
@@ -100,12 +116,16 @@ class UsersController extends Controller
      */
     public function edit(Request $request, $id)
     {
+        /*
         if ($request->user()->is_admin) {
+        */
             $user = User::find($id);
             return view('admin.edituser', compact('user'));
-        } else {
+    /*
+    } else {
             return redirect()->route('commercial.dashboard');
         }
+    */
     }
 
     /**
@@ -124,7 +144,7 @@ class UsersController extends Controller
             'email' => 'required|string|email|max:255|unique:users,id,' .$id,
             'password' => "required|min:8|confirmed",
         ]);
-        //$user = User::find($id);
+        //$user = Users::find($id);
 
         if ($request->user()->id == $id || $request->user()->is_admin) {
             $user = User::where('id', $id);

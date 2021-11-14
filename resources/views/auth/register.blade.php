@@ -14,9 +14,9 @@
 
             <!-- Firstname -->
             <div>
-                <x-label for="firstname" :value="__('Prénom')" />
+                <x-label for="name" :value="__('Prénom')" />
 
-                <x-input id="firstname" class="block mt-1 w-full" type="text" name="firstname" :value="old('firstname')" required autofocus />
+                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             </div>
 
             <!-- Lastname -->

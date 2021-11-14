@@ -66,7 +66,7 @@ return [
             'subject'        => '',
             'keywords'       => '',
             'category'       => '',
-            'manager'        => '',
+            'managers'        => '',
             'company'        => '',
         ],
     ],
@@ -144,7 +144,7 @@ return [
             'subject'        => '',
             'keywords'       => '',
             'category'       => '',
-            'manager'        => '',
+            'managers'        => '',
             'company'        => '',
         ],
 

@@ -1,7 +1,6 @@
 @extends('layouts.main')
 @section('content')
     @include('layouts.sidebar')
-
             <div>
                 @if(session('success'))
                     <ul>
