@@ -1,25 +1,21 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\User;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CommercialController extends Controller
+class ManagerController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        //----Commercial dashboard-----///
-        if ($request->user()->role_id == 2) {
-            return view('commercial.dashboard');
-        }
+        //
     }
-
 
     /**
      * Show the form for creating a new resource.

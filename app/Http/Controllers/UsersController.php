@@ -144,7 +144,7 @@ class UsersController extends Controller
             'email' => 'required|string|email|max:255|unique:users,id,' .$id,
             'password' => "required|min:8|confirmed",
         ]);
-        //$user = Users::find($id);
+        //$user = User::find($id);
 
         if ($request->user()->id == $id || $request->user()->is_admin) {
             $user = User::where('id', $id);
