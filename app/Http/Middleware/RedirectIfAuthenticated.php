@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Admin;
 use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
@@ -19,18 +20,19 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check() && Auth::user()->role_id == 1) {
-            return redirect()->route('admin.dashboard');
 
-        } elseif(Auth::guard($guard)->check() && Auth::user()->role_id == 2){
-            return redirect()->route('commercial.dashboard');
+    if (Auth::guard($guard)->check() && Auth::user()->role_id == 1) {
+                 return redirect()->route('admin.dashboard');
 
-        } elseif(Auth::guard($guard)->check() && Auth::user()->role_id == 3){
-            return redirect()->route('manager.dashboard');
+             } elseif(Auth::guard($guard)->check() && Auth::user()->role_id == 2){
+                 return redirect()->route('commercial.dashboard');
 
-        }else {
-            //return redirect()->route('pages.welcome');
-            return $next($request);
-        }
-     }
+             } elseif(Auth::guard($guard)->check() && Auth::user()->role_id == 3){
+                 return redirect()->route('manager.dashboard');
+
+             }else {
+                 //return redirect()->route('pages.welcome');
+                 return $next($request);
+             }
+    }
 }

@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
-use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -16,6 +16,7 @@ class AuthenticatedSessionController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
+
     public function create()
     {
         return view('auth.login');
@@ -24,25 +25,16 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      *
-     * @param  \App\Http\Requests\Auth\LoginRequest  $request
+     * @param \App\Http\Requests\Auth\LoginRequest $request
      * @return \Illuminate\Http\RedirectResponse
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function store(LoginRequest $request)
     {
         $request->authenticate();
-
         $request->session()->regenerate();
 
-        if ($request->user()->role_id == 3) {
-            $userList = User::get();
-            return view('manager.dashboard', ['userlist' => $userList]);
-        } elseif($request->user()->role_id == 2){
-            return view('commercial.dashboard');
-        }elseif($request->user()->role_id == 1){
-            return view('admin.dashboard');
-        } else {
-            return redirect()->intended(RouteServiceProvider::HOME);
-        }
+        return redirect()->intended(RouteServiceProvider::HOME);
     }
 
     /**
@@ -54,9 +46,7 @@ class AuthenticatedSessionController extends Controller
     public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
-
         $request->session()->invalidate();
-
         $request->session()->regenerateToken();
 
         return redirect('/');

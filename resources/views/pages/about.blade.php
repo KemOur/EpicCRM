@@ -1,13 +1,9 @@
-@extends('layouts.main')
-@section('content')
-    <div class="container">
-        <header>
-            @extends("layouts.navigation")
-        </header>
+@include('partials.header')
+<div class="container">
         <main><br><br>
             <div class="p-5 mb-4 bg-light rounded-3">
                 <div class="container-fluid py-5">
-                    <h3> Qu'est-ce que le CRM ? </h3>
+                    <h3 style="color: #4595ED"> Qu'est-ce que le CRM ? </h3>
                     <p>
                         Le CRM ou gestion de la relation client (Customer Relationship Management) est une stratégie de gestion des relations et interactions
                         d'une entreprise avec ses clients ou clients potentiels. Un système CRM aide les entreprises à interagir en permanence avec les clients,
@@ -17,7 +13,7 @@
                 <hr>
 
                 <div class="container-fluid py-5">
-                    <h3> Le CRM englobe généralement trois notions : </h3>
+                    <h3 style="color: #4595ED"> Le CRM englobe généralement trois notions : </h3>
                     <p>
                         Le CRM en tant que technologie : produit technologique, souvent basé sur le cloud, que les équipes utilisent pour enregistrer,
                         suivre et analyser les interactions entre l'entreprise et les utilisateurs. Il est également appelé système ou solution CRM.
@@ -28,7 +24,7 @@
                 <hr>
 
                 <div class="container-fluid py-5">
-                    <h3> Les avantages du CRM  : </h3>
+                    <h3 style="color: #4595ED"> Les avantages du CRM  : </h3>
                     <div>
                         <ol>
                             <li>1. Gestion des contacts améliorée</li>
@@ -46,49 +42,31 @@
                 </div>
 
                 <div class="container px-4 py-5" id="featured-3">
-                    <h2 class="pb-2 border-bottom">Nos clients</h2>
+                    <h2 class="pb-2 border-bottom" style="color: #4595ED">Nos clients</h2>
                     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
                         <div class="feature col">
-                            <div class="feature-icon bg-info bg-gradient">
-                                <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
-                            </div>
                             <h2 class="my-4 h4">Simple, rapide, intuitif</h2>
                             <p>"Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words."</p>
                         </div>
                         <div class="feature col">
-                            <div class="feature-icon bg-info bg-gradient">
-                                <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
-                            </div>
                             <h2 class="my-4 h4">Une valeur sûre !</h2>
                             <p>"Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words."</p>
                         </div>
                         <div class="feature col">
-                            <div class="feature-icon bg-info bg-gradient">
-                                <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-                            </div>
                             <h2 class="my-4 h4">Un CRM efficace</h2>
                             <p>"Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words."</p>
                         </div>
                     </div>
                     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
                         <div class="feature col">
-                            <div class="feature-icon bg-info bg-gradient">
-                                <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
-                            </div>
                             <h2 class="my-4 h4">Trés facile d'utilisation</h2>
                             <p>"Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words."</p>
                         </div>
                         <div class="feature col">
-                            <div class="feature-icon bg-info bg-gradient">
-                                <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
-                            </div>
                             <h2 class="my-4 h4">Un CRM intuitif</h2>
                             <p>"Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words."</p>
                         </div>
                         <div class="feature col">
-                            <div class="feature-icon bg-info bg-gradient">
-                                <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-                            </div>
                             <h2 class="my-4 h4">Puissance, simplicité</h2>
                             <p>"Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words."</p>
                         </div>
@@ -97,5 +75,4 @@
             </div>
         </main>
     </div>
-    @include('partials.footer')
-@endsection
+@include('partials.footer')

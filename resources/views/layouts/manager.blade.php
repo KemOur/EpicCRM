@@ -1,4 +1,3 @@
-
 <!-- sidebar -->
 <div class="d-flex" style="height: 100vh;">
     <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 20%; background-color: #4e73df">
@@ -25,7 +24,7 @@
             </li>
 
             <li class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse-a" aria-expanded="false">
-                <a class="nav-link link-dark" href="{{route('manager.profile')}}" style="color: #ffffff">
+                <a class="nav-link link-dark" href="{{route('manager.profile.manager')}}" style="color: #ffffff">
                     <div>
                         <div style="float: left; display: flex; margin-right: 10px; margin-top: 4px">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
@@ -59,7 +58,7 @@
 
                 <div class="collapse" id="clients" style="margin-left: 50px">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link-dark rounded" style="color: #ffffff">Liste des clients</a></li>
+                        <li><a href="#" class="link-dark rounded" style="color: #ffffff">Clients</a></li>
                         <li><a href="#" class="link-dark rounded" style="color: #ffffff">Ajouter un client</a></li>
                     </ul>
                 </div>
@@ -78,7 +77,7 @@
                             </svg>
                         </div>
                         <div style="display:flex;">
-                            <p> Utilisateurs </p>
+                            <p> Commercials </p>
                             <svg xmlns="http://www.w3.org/2000/svg" style="float: right; margin-left: 53px;margin-top: 5px" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
                             </svg>
@@ -88,8 +87,8 @@
 
                 <div class="collapse" id="users" style="margin-left: 50px">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ route('manager.users') }}" class="link-dark rounded" style="color: #ffffff">Tous les utilisateurs</a></li>
-                        <li><a href="{{ route('manager.adduser')}}" class="link-dark rounded" style="color: #ffffff">Ajouter un utilisateur</a></li>
+                        <li><a href="{{ route('manager.commercials.commercials') }}" class="link-dark rounded" style="color: #ffffff">Tous les utilisateurs</a></li>
+                        <li><a href="{{ route('manager.commercials.addcommercial')}}" class="link-dark rounded" style="color: #ffffff">Ajouter un utilisateur</a></li>
                     </ul>
                 </div>
                 <hr style="color: #ffffff">
@@ -117,15 +116,14 @@
 
                 <div class="collapse" id="dashboard-collapse" style="margin-left: 50px">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ route('manager.leads') }}" class="link-dark rounded" style="color: #ffffff">Tous les leads</a></li>
-                        <li><a href="{{ route('manager.addlead')}}" class="link-dark rounded" style="color: #ffffff">Ajouter un lead</a></li>
+                        <li><a href="{{ route('manager.leads.leads') }}" class="link-dark rounded" style="color: #ffffff">Tous les leads</a></li>
+                        <li><a href="{{ route('manager.leads.addlead')}}" class="link-dark rounded" style="color: #ffffff">Ajouter un lead</a></li>
                         <li><a href="#" class="link-dark rounded" style="color: #ffffff">Leads Gagné</a></li>
                         <li><a href="#" class="link-dark rounded" style="color: #ffffff">Leads Perdu</a></li>
                     </ul>
                 </div>
                 <hr style="color: #ffffff">
             </li>
-
 
             <li class="mb-1">
                 <div class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#params" aria-expanded="false">
@@ -191,7 +189,7 @@
                                 @endif
                             </a>
                             <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                                <a class="dropdown-item" href="{{route('manager.profile')}}"> Profaefile </a>
+                                <a class="dropdown-item" href="{{route('manager.profile.manager')}}"> Profaefile </a>
                                 <hr>
                                 <li>
                                     <a class="dropdown-item" href="#">

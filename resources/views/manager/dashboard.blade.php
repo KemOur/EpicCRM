@@ -1,8 +1,5 @@
-@extends('layouts.main')
-@section('content')
-
-    @include('layouts.sidebar')
-    <div class="container row" style="width: 100%;margin-left: 5%;margin-top: 5%;">
+@include('partials.manager.managerheader')
+ <div class="container row" style="width: 100%;margin-left: 5%;margin-top: 5%;">
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
@@ -11,7 +8,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">LEADS</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">40</div>
                         </div>
-                        <a type="button" href="{{route('manager.leads')}}" style="margin-block: 0;background-color: dodgerblue;
+                        <a type="button" href="{{route('manager.leads.leads')}}" style="margin-block: 0;background-color: dodgerblue;
                                    color: #ffffff">Liste des leads</a>
                     </div>
                 </div>
@@ -74,7 +71,7 @@
                 <p>
                     Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée
                 </p>
-                <a href="{{ route('manager.leads') }}">
+                <a href="{{ route('manager.leads.leads') }}">
                     <button type="button" class="btn btn-secondary">Liste des leads</button>
                 </a>
             </div>
@@ -84,7 +81,7 @@
                 <p>
                     Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée
                 </p>
-                <a href="{{ route('manager.users') }}">
+                <a href="{{ route('manager.commercials.commercials') }}">
                     <button type="button" class="btn btn-dark">Liste des commerciaux</button>
                 </a>
             </div>
@@ -93,4 +90,3 @@
     </div>
     </div>
 
-@endsection

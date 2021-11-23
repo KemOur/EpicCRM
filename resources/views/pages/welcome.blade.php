@@ -1,9 +1,6 @@
-@extends('layouts.main')
-@section('content')
-    @extends("layouts.navigation")
-
+@include('partials.header')
     <div class="bg-black py-5" style="background-image: url('./imgs/bh.jpg')">
-            <div class="container px-5">
+        <div class="container px-5">
                 <div class="row gx-5 align-items-center justify-content-center">
                     <div class="col-lg-8 col-xl-7 col-xxl-6">
                         <div class="my-5 text-center text-xl-start">
@@ -12,7 +9,7 @@
                                 Pensé pour aider les équipes commerciales à suivre leurs prospects et conclure leurs ventes sans perdre de temps en saisies inutiles.
                             </p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                <a class="btn btn-lg px-4" href="#!" style="background-color: #65d353; color: #ffffff">Test Gratuit</a>
+                                <a class="btn btn-lg px-4" href="#!" style="background-color: #65d353; color: #ffffff">Démarrer votre test gratuit</a>
                             </div>
                         </div>
                     </div>
@@ -23,9 +20,9 @@
             </div>
         </div>
 
-            <main class="" style="background-color: #FBFDFF">
+            <div class="" style="background-color: #FBFDFF">
                 <div class="container-fluid py-5"><br>
-                    <h3 style="text-align: center;font-size: 53px;"> Qu'est-ce que le CRM ? </h3>
+                    <h5 style="text-align: center;font-size: 38px;"> Pourquoi epicCRM plutôt qu'un CRM? </h5>
                 </div>
 
                 <div class="container">
@@ -33,36 +30,33 @@
                 <div class=" row">
                     <div class="col-md-4">
                         <h4>Le problème des CRMs</h4>
-                        <p>
+                        <p style="font-size: 15px">
                             Les CRMs se concentrent sur l'organisation de la donnée, mais vendre ce n'est pas trier. Vendre est un processus qui démarre avec un prospect et doit finir avec un client.
                             Des indicateurs clés pour les manageurs et des fonctionnalités de collaboration pour bâtir la meilleure équipe commerciale.
                         </p>
                     </div>
                     <div class="col-md-4">
                         <h4>Notre solution</h4>
-                        <p>
+                        <p style="font-size: 15px">
                             noCRM.io est une solution de suivi des opportunités commerciale basée sur les prochaines actions (relance email, appel, visite ...). Son but est d'aider vos équipes commerciales à se concentrer sur leur objectif principal, convertir les prospects en clients.
                             Créez facilement des opportunités depuis de multiples sources comme LinkedIn ou des cartes de visite. Diminuez le temps passé sur des formulaires et commencez à travaillez vos prospects tout de suite !
                         </p>
                     </div>
                     <div class="col-md-4">
                         <h4>Est-ce pour vous ?</h4>
-                        <p>
+                        <p style="font-size: 15px">
                             noCRM.io est l'outil idéal pour les TPE/PME qui cherchent un outil simple et efficace pour organiser leur prospection commerciale. Grâce à ses différentes éditions il convient au 1er commercial comme à des équipes de vente de 100 personnes
                             noCRM.io est un logiciel en SaaS, il ne nécessite ni installation ni maintenance. Votre compte est accessible en ligne, à n'importe quel moment, où que vous soyez.
                         </p>
                     </div>
                 </div>
-
                 </div>
 
-                <br>
-                <br>
-                <br>
+                <br> <br> <br>
                 <div class="container px-4 py-5" id="icon-grid">
                     <div>
-                        <h2 class="mb-4" style="text-align: center;font-size: 43px;">
-                            Les fonctionnalités dont vos commerciaux ont réellement besoin !
+                        <h2 class="foncneed mb-4">
+                            Les fonctionnalités dont vos commerciaux <br> ont réellement besoin !
                         </h2>
                     </div><br>
 
@@ -70,9 +64,9 @@
                         <div class="px-lg-5">
                             <!-- Page Features-->
                             <div class="row gx-lg-5">
-                                <div class="col-lg-6 col-xxl-4 mb-5">
-                                    <div class="card border-0 h-100" style="background-color: #F8F9FA">
-                                        <div class="card-body text-center p-4 p-lg-5 py-4">
+                                <div class="col-lg-4 col-xxl-4 mb-5 ">
+                                    <div class="card border-info h-100">
+                                        <div class="card-body text-center p-4 p-lg-5 py-4 ">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="56" style="color: #2288e4" height="56" fill="currentColor" class="bi bi-app-indicator" viewBox="0 0 16 16">
                                                     <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z"/>
@@ -86,8 +80,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-xxl-4 mb-5">
-                                    <div class="card border-0 h-100" style="background-color: #F8F9FA">
+                                <div class="col-lg-4 col-xxl-4 mb-5">
+                                    <div class="card border-info h-100">
                                         <div class="card-body text-center p-4 p-lg-5 py-4">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="56" style="color: #2288e4" height="56" fill="currentColor" class="bi bi-view-list" viewBox="0 0 16 16">
@@ -101,8 +95,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-xxl-4 mb-5">
-                                    <div class="card border-0 h-100" style="background-color: #F8F9FA">
+                                <div class="col-lg-4 col-xxl-4 mb-5">
+                                    <div class="card border-info h-100">
                                         <div class="card-body text-center p-4 p-lg-5 py-4">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="56" style="color: #2288e4" height="56" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
@@ -116,8 +110,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-xxl-4 mb-5">
-                                    <div class="card border-0 h-100" style="background-color: #F8F9FA">
+                                <div class="col-lg-4 col-xxl-4 mb-5">
+                                    <div class="card border-info h-100">
                                         <div class="card-body text-center p-4 p-lg-5 py-4">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg"  width="56" style="color: #2288e4" height="56" fill="currentColor" class="bi bi-envelope-open" viewBox="0 0 16 16">
@@ -131,8 +125,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-xxl-4 mb-5">
-                                    <div class="card border-0 h-100" style="background-color: #F8F9FA">
+                                <div class="col-lg-4 col-xxl-4 mb-5">
+                                    <div class="card border-info h-100">
                                         <div class="card-body text-center p-4 p-lg-5 py-4">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="56" style="color: #2288e4" height="56" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
@@ -147,8 +141,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-xxl-4 mb-5">
-                                    <div class="card border-0 h-100" style="background-color: #F8F9FA">
+                                <div class="col-lg-4 col-xxl-4 mb-5">
+                                    <div class="card border-info h-100">
                                         <div class="card-body text-center p-4 p-lg-5 py-4">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="56" style="color: #2288e4" height="56" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16">
@@ -169,9 +163,9 @@
                 </div>
 
                 <div class="container">
-                    <h4 style="text-align: center; margin: 35px; font-family: Roboto;">
+                    <h2 style="text-align: center; margin: 45px; font-family: Roboto;">
                         La plateforme CRM simple à utiliser
-                    </h4>
+                    </h2>
 
                 <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
                     <div class="col">
@@ -222,9 +216,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><br><br><br>
 
-                <hr><br><br>
 
                 <div class="table-responsive">
                     <table class="table text-center">
@@ -282,6 +275,5 @@
                 </div>
                 <br>
                 <br>
-            </main>
-    @include('partials.footer')
-@endsection
+            </div>
+@include('partials.footer')

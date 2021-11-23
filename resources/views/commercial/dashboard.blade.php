@@ -1,6 +1,5 @@
-@extends('layouts.main')
-@section('content')
-    <div class="container">
+@include('partials.commercial.commercialheader')
+<div class="container">
     <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -13,7 +12,6 @@
 
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-
                     @if (auth()->check() && auth()->user()->id)
                         <h5>Commercial {{auth()->user()->firstname}}</h5>
                     @else
@@ -98,9 +96,8 @@
                         <div class="my-3 p-3 bg-body rounded shadow-sm">
                             <h6 class="border-bottom pb-2 mb-0">
                                 Gagné
-                                <hr class="bg-success">
-                                <br>
-                                <br>
+                                <hr class="bg-success"> <br> <br>
+
                                 <div class="d-flex justify-content-between">
                                     <small>15 opportunités</small>
                                     <a href="#">5.000€</a>
@@ -260,5 +257,4 @@
         </div>
     </div>
 </x-app-layout>
-
-@endsection
+</div>

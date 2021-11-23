@@ -14,6 +14,7 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
+
     public function index(Request $request)
     {
         //if ($request->user()->is_admin) {

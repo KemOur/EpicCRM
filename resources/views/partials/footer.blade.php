@@ -1,35 +1,61 @@
-<footer class="pt-14 my-md-10 pt-md-15 border-top" style="background-color: #F8F9FA">
+<footer class="pt-14 my-md-10 pt-md-15 border-top" style="">
     <div class="container">
-
     <div class="row">
-        <div class="col-12 col-md">
-            <img class="mb-2" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="24" height="19">
-            <small class="d-block mb-3 text-muted">© 2021</small>
-        </div>
         <div class="col-6 col-md">
-            <h5>À propos</h5>
+            <h6>À propos</h6>
             <ul class="list-unstyled text-small">
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Centre d'aide</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="/guide">Le guide complet</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="/suivie">Organiser le suivie client</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="/alternativeexcel">Une bonne alternative à excel</a></li>
+            </ul>
+        </div>
+
+        <div class="col-6 col-md">
+            <h6>Resources</h6>
+            <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Conditions d'utilisation</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="/aide">Centre d'aide</a></li>
+            </ul>
+        </div>
+
+        <div class="col-6 col-md">
+            <h6>Leads</h6>
+            <ul class="list-unstyled text-small">
+                <li class="mb-1"> <a class="link-secondary text-decoration-none" href="#"> <small>Prospection, opportunités, clients</small> </a> </li>
                 <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Politique de confidentialité</a></li>
             </ul>
         </div>
+
         <div class="col-6 col-md">
-            <h5>Resources</h5>
+            <h6>Mon compte</h6>
             <ul class="list-unstyled text-small">
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Conditions d'utilisation</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Suivi de ses clients</a></li>
-            </ul>
-        </div>
-        <div class="col-6 col-md">
-            <h5>Ressources</h5>
-            <ul class="list-unstyled text-small">
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Nos clients</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Tarif</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="/login">Se connecter</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="/register">S'inscrire</a></li>
             </ul>
         </div>
     </div>
     </div>
 
     <br>
+    <div class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+            <span class="text-muted">© 2021 EpicCRM, France</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <img src="{{asset('./imgs/socialmedialogo/face.png')}}" alt="facebook" class="image_logo" style="width: 40px; height: 40px; margin-right: 5px">
+            <img src="{{asset('./imgs/socialmedialogo/linkedin.png')}}" alt="gmail" class="image_logo" style="width: 40px; height: 40px; margin-right: 5px">
+            <img src="{{asset('./imgs/socialmedialogo/instagram.png')}}" alt="instagram" class="image_logo" style="width: 40px; height: 40px; margin-right: 5px">
+            <img src="{{asset('./imgs/socialmedialogo/linke.png')}}" alt="linkedin" class="image_logo" style="width: 40px; height: 40px; margin-right: 5px">
+        </ul>
+
+    </div>
     <br>
 </footer>
+

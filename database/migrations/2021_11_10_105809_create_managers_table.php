@@ -14,9 +14,8 @@ class CreateManagersTable extends Migration
     public function up()
     {
         Schema::create('managers', function (Blueprint $table) {
-
             $table->increments('id');
-            $table->bigInteger('role_id')->default(3);
+            //$table->bigInteger('role_id')->default(3);
             $table->string('name');
             $table->string('lastname');
             $table->string('email')->unique();
@@ -34,6 +33,6 @@ class CreateManagersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('managers');
+        Schema::dropIfExists('profile');
     }
 }

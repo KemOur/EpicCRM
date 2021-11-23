@@ -1,22 +1,6 @@
-@extends('layouts.main')
-@section('content')
-    <div class="container">
-        <header>
-            @extends("layouts.navigation")
-        </header>
-        <main>
-                <h3 style="text-align: center; margin-top: 30px; font-family: Roboto;">
-                    Un tarif qui s'adapte
-                </h3>
-
-                <h5 style="text-align: center; margin-top: 10px; font-family: Roboto;">
-                    Boostez vos ventes quelle que soit la taille de vos équipes.
-                </h5>
-
-                <p style="text-align: center; margin-top: 5px; font-family: Roboto;">
-                    Toutes les éditions de EpicCRM sont conformes au RGPD. <small>Paiement mensuel sans engagement</small>
-                </p><br>
-
+@include('partials.header')
+<div class="container">
+         <br>
             <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm">
@@ -123,10 +107,11 @@
             </div>
             <br>
             <br>
-            <div class="bg-light p-5 rounded mt-3">
-                <h5 style="text-align: center">Accompagnement Premium en ligne à partir de 900€ </h5>
-                <p style="text-align: center" class="lead">Cette offre est divisée en 4 étapes : Analyse, Formation, Livrables et Suivi Client.</p>
-                <div class="d-grid gap-2 col-6 mx-auto">
+            <div class="p-5 rounded mt-3" style="background-color: #4595ED">
+                <h5 style="text-align: center; color: #ffffff">Accompagnement Premium en ligne à partir de 900€ </h5>
+                <p style="text-align: center; color: #ffffff" class="lead">Cette offre est divisée en 4 étapes : Analyse, Formation, Livrables et Suivi Client.</p>
+
+                <div class="d-grid gap-3 col-4 mx-auto">
                     <button class="btn" style="background-color: #65d353; color: #ffffff" type="button">Contacter</button>
                 </div>
             </div>
@@ -207,16 +192,15 @@
                 <div>
                     <br>
                     <br>
-                    <div class="bg-light p-5 rounded mt-3">
-                        <h6>Formation des Administrateurs à l'usage de noCRM et à la gestion du compte : équipes, reporting, personnalisation. </h6><br>
-                        <div class="d-grid gap-2 col-6 mx-auto">
+                    <div class="p-5 rounded mt-3" style="background-color: #4595ED">
+                        <h6 style="color: #ffffff">Formation des Administrateurs à l'usage de noCRM et à la gestion du compte : équipes, reporting, personnalisation. </h6><br>
+                        <div class="d-grid gap-2 col-4 mx-auto">
                             <button class="btn" style="background-color: #65d353; color: #ffffff" type="button">Test Gratuit</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
 <br>
-    @include('partials.footer')
-@endsection
+<br>
+@include('partials.footer')

@@ -1,9 +1,7 @@
 <?php
 
-use App\Http\Controllers\HomepageController;
-use App\Http\Controllers\LeadsController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CommercialController;
+use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\TodoController;
 use App\Http\Controllers\DoController;
 use App\Http\Controllers\TocallController;
@@ -15,16 +13,17 @@ use App\Http\Controllers\LostController;
 |--------------------------------------------------------------------------
 */
 
-        /*----------------------------------------[ WELCOME ]-----------------------------------------*/
+        /*----------------------------------------[ VISITOR ]-----------------------------------------*/
 
-        /*--------HOME---------*/
         Route::get('/',  [HomepageController::class, 'index'])->name('pages.welcome');
-        /*--------FEATURES---------*/
         Route::get('/features', function () { return view('pages.features');});
-        /*--------PRICING---------*/
         Route::get('/pricing', function () { return view('pages.pricing');});
-        /*--------ABOUT---------*/
         Route::get('/about', function () { return view('pages.about');});
+        Route::get('/guide', function () { return view('pages.guide');});
+        Route::get('/suivie', function () { return view('pages.suivie');});
+        Route::get('/alternativeexcel', function () { return view('pages.alternativeexcel');});
+        Route::get('/aide', function () { return view('pages.aide');});
+        Route::get('/prospection', function () { return view('pages.prospection');});
 
 
 
@@ -33,8 +32,19 @@ use App\Http\Controllers\LostController;
 /*--------------------------------------------------------[ ADMIN ]----------------------------------------------------------------*/
 
         /*------------------[ ADMIN - HOMEPAGE - DASHBOARD]-----------------*/
-        Route::get('admin/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->middleware('auth')->name('admin.dashboard');
 
+
+        //Route::get('admin/d', [\App\Http\Controllers\Admin\AdminController::class, 'index'])->middleware(['auth:admin'])->name('admin.dashboard');
+        Route::post('/admin/check',[\App\Http\Controllers\Admin\AdminController::class, 'check'])->middleware('guest:admin')->name('admin');
+        Route::get('/admin/login',[\App\Http\Controllers\Admin\AdminController::class,'login'])->name('admin.login');
+
+        //Route::prefix('admin/login', [\App\Http\Controllers\Admin\DashboardController::class, 'login']);
+        //Route::post('admin/check', [\App\Http\Controllers\Admin\AdminController::class, 'check'])->middleware('admin')->name('admin.check');
+        //Route::get('admin/d', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->middleware('auth ')->name('admin.dashboard');
+
+
+        Route::get('admin/d', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->middleware('auth')->name('admin.dashboard');
+        //Route::get('admin/login', [\App\Http\Controllers\Admin\DashboardController::class, 'login']);
         /*------------[ ADMIN - ADMINISTRATION ]------------*/
         Route::get('admin/administration/addadmin', [\App\Http\Controllers\Admin\AdminController::class, 'create'])->middleware('auth')->name('admin.administration.addadmin');
         Route::get('admin/administration/admin', [\App\Http\Controllers\Admin\AdminController::class, 'show'])->middleware('auth')->name('admin.administration.admin');
@@ -60,10 +70,10 @@ use App\Http\Controllers\LostController;
         Route::get('admin/leads/leadstypes/leadtypes', [\App\Http\Controllers\Admin\LeadTypeController::class, 'index'])->middleware('auth')->name('admin.leads.leadstypes.leadtypes');
 
         /*------------[ ADMIN - MANAGERS ]------------*/
-        Route::get('admin/managers/addmanager', [\App\Http\Controllers\Admin\ManagerController::class, 'create'])->middleware('auth')->name('admin.managers.addmanager');
-        Route::get('admin/managers/editmanager', [\App\Http\Controllers\Admin\ManagerController::class, 'edit'])->middleware('auth')->name('admin.managers.editmanager');
-        Route::get('admin/managers/manager', [\App\Http\Controllers\Admin\ManagerController::class, 'show'])->middleware('auth')->name('admin.managers.manager');
-        Route::get('admin/managers/managers', [\App\Http\Controllers\Admin\ManagerController::class, 'index'])->middleware('auth')->name('admin.managers.managers');
+        Route::get('admin/profile/addmanager', [\App\Http\Controllers\Admin\ManagerController::class, 'create'])->middleware('auth')->name('admin.profile.addmanager');
+        Route::get('admin/profile/editmanager', [\App\Http\Controllers\Admin\ManagerController::class, 'edit'])->middleware('auth')->name('admin.profile.editmanager');
+        Route::get('admin/profile/manager', [\App\Http\Controllers\Admin\ManagerController::class, 'show'])->middleware('auth')->name('admin.profile.manager');
+        Route::get('admin/profile/profile', [\App\Http\Controllers\Admin\ManagerController::class, 'index'])->middleware('auth')->name('admin.profile.profile');
 
         /*------------[ ADMIN - PLANS ]------------*/
         Route::get('admin/plans/addplan', [\App\Http\Controllers\Admin\PlanController::class, 'create'])->middleware('auth')->name('admin.plans.addplan');
@@ -83,72 +93,61 @@ use App\Http\Controllers\LostController;
 
 
 
+/*--------------------------------------------------------[ MANAGER ]----------------------------------------------------------------*/
 
-
-
-
-
-
-        /*------------[ MANAGER ROUTES ]------------*/
-
-        //--DASHBOARD MANAGER--//
+        //-----------------[ DASHBOARD ]--------------//
         Route::get('manager/dashboard', [\App\Http\Controllers\Manager\DashboardController::class, 'index'])->middleware('auth')->name('manager.dashboard');
         //Route::get('/manager/dashboard', [\App\Http\Controllers\Manager\DashboardController::class, 'index'])->middleware('auth')->name('manager.dashboard');
         //Route::get('/manager/dashboard', [\App\Http\Controllers\UsersController::class, 'index'])->middleware('auth')->name('manager.dashboard');
 
-        //--DASHBOARD PROFILE--//
-        Route::get('/manager/dashboard/profile', [\App\Http\Controllers\UsersController::class, 'profile'])->middleware('auth')->name('manager.profile');
-        //----USERS LIST-----//
-        Route::get('/manager/dashboard/users', [\App\Http\Controllers\UsersController::class, 'users'])->middleware('auth')->name('manager.users');
-        //----ADD FORM USER----//
-        Route::get('/manager/dashboard/adduser', [\App\Http\Controllers\UsersController::class, 'adduser' ]) ->middleware('auth')->name('manager.adduser');
-        //----STORE---//
-        Route::post('/manager/dashboard/user/store', [\App\Http\Controllers\UsersController::class, 'store' ]) ->middleware('auth')->name('manager.store.user');
-        //----DELETE----//
-        Route::delete('/manager/dashboard/user/destroy/{id}', [\App\Http\Controllers\UsersController::class, 'destroy'])->middleware('auth') ->name('manager.destroy.user');
-        //---EDITION-FORM AND EDIT---//
-        Route::get('/manager/dashboard/edituser/{id}', [\App\Http\Controllers\UsersController::class, 'edit' ]) ->middleware('auth')->name('manager.edit.user');
-        Route::put('/manager/dashboard/edituser/store/{id}', [\App\Http\Controllers\UsersController::class, 'update' ])->middleware('auth')->name('manager.update.user');
+        //------------------[ PROFILE ]----------------//
+        Route::get('/manager/profile/manager', [\App\Http\Controllers\Manager\ManagerController::class, 'profile'])->middleware('auth')->name('manager.profile.manager');
+        Route::get('/manager/profile/editmanager/{id}', [\App\Http\Controllers\Manager\ManagerController::class, 'edit'])->middleware('auth')->name('manager.profile.editmanager');
+        Route::get('/manager/profile/editmanager/store/{id}', [\App\Http\Controllers\Manager\ManagerController::class, 'update'])->middleware('auth')->name('manager.profile.editmanager');
 
+        //----------------[ COMMERCIAL ]--------------//
+        Route::get('/manager/commercials/commercials', [\App\Http\Controllers\Manager\CommercialController::class, 'index'])->middleware('auth')->name('manager.commercials.commercials');
+        Route::get('/manager/commercials/addcommercial', [\App\Http\Controllers\Manager\CommercialController::class, 'create' ]) ->middleware('auth')->name('manager.commercials.addcommercial');
+        Route::post('/manager/commercials/addcommercial/store', [\App\Http\Controllers\Manager\CommercialController::class, 'store' ]) ->middleware('auth')->name('manager.commercials.addcommercial.store');
+        Route::delete('/manager/commercials/destroy/{id}', [\App\Http\Controllers\Manager\CommercialController::class, 'destroy'])->middleware('auth') ->name('manager.commercials.destroy');
+        Route::get('/manager/commercials/editcommercial/{id}', [\App\Http\Controllers\Manager\CommercialController::class, 'edit' ]) ->middleware('auth')->name('manager.commercials.editcommercial');
+        Route::put('/manager/commercials/editcommercial/store/{id}', [\App\Http\Controllers\Manager\CommercialController::class, 'update' ])->middleware('auth')->name('manager.commercials.editcommercial');
 
-        //---LEADS LIST---//
-        Route::get('/manager/dashboard/leads', [\App\Http\Controllers\LeadsController::class, 'index'])->middleware('auth')->name('manager.leads');
-        //--ADD FORM LEAD--//
-        Route::get('/manager/dashboard/addlead', [\App\Http\Controllers\LeadsController::class, 'addlead'])->middleware('auth')->name('manager.addlead');
-        //---SSTORE---//
-        Route::post('/manager/dashboard/store', [\App\Http\Controllers\LeadsController::class, 'store' ]) ->middleware('auth')->name('manager.store');
-        //--SHOW--//
-        Route::get('manager/dashboard/show/{id}', [\App\Http\Controllers\LeadsController::class, 'show' ]) ->middleware('auth')->name('manager.show');
-        //---DELETE---//
-        Route::delete('manager/dashboard/destroy/{id}', [\App\Http\Controllers\LeadsController::class, 'destroy'])->middleware('auth') ->name('manager.destroy');
-        //--EDITION-FORM and edit--//
-        Route::get('manager/dashboard/editlead/{id}', [\App\Http\Controllers\LeadsController::class, 'edit' ]) ->middleware('auth')->name('manager.edit');
-        Route::put('mannager/dashboard/editlead/store/{id}', [\App\Http\Controllers\LeadsController::class, 'update' ])->middleware('auth')->name('manager.update');
+        //-------------------[ LEAD ]-----------------//
+        Route::get('/manager/leads/leads', [\App\Http\Controllers\LeadsController::class, 'index'])->middleware('auth')->name('manager.leads.leads');
+        Route::get('/manager/leads/addlead', [\App\Http\Controllers\LeadsController::class, 'addlead'])->middleware('auth')->name('manager.leads.addlead');
+        Route::post('/manager/leads/store', [\App\Http\Controllers\LeadsController::class, 'store' ]) ->middleware('auth')->name('manager.leads.store');
+        Route::get('manager/leads/lead/{id}', [\App\Http\Controllers\LeadsController::class, 'show' ]) ->middleware('auth')->name('manager.leads.lead');
+        Route::delete('manager/leads/{id}', [\App\Http\Controllers\LeadsController::class, 'destroy'])->middleware('auth') ->name('manager.leads.destroy');
+        Route::get('manager/leads/editlead/{id}', [\App\Http\Controllers\LeadsController::class, 'edit' ]) ->middleware('auth')->name('manager.leads.editlead');
+        Route::put('manager/leads/editlead/store/{id}', [\App\Http\Controllers\LeadsController::class, 'update' ])->middleware('auth')->name('manager.leads.editlead.update');
 
         //--IMPORT EXCEL FILE--//
-        Route::post('manager/dashboard/leads', [\App\Http\Controllers\LeadsController::class, 'import' ])->middleware('auth')->name('manager.import');
+        Route::post('manager/leads/leads', [\App\Http\Controllers\LeadsController::class, 'import' ])->middleware('auth')->name('manager.leads.leads.import');
         //--EXPORT EXCEL/CSV FILE--//
-        Route::get('manager/dashboard/leads/export-excel', [\App\Http\Controllers\LeadsController::class, 'exportIntoExcel' ])->middleware('auth')->name('manager.exportIntoExcel');
-        Route::get('manager/dashboard/leads/export-csv', [\App\Http\Controllers\LeadsController::class, 'exportIntoCSV' ])->middleware('auth')->name('manager.exportIntoCSV');
+        Route::get('manager/leads/leads/export-excel', [\App\Http\Controllers\LeadsController::class, 'exportIntoExcel' ])->middleware('auth')->name('manager.leads.leads.exportIntoExcel');
+        Route::get('manager/leads/leads/export-csv', [\App\Http\Controllers\LeadsController::class, 'exportIntoCSV' ])->middleware('auth')->name('manager.leads.leads.exportIntoCSV');
+
+        //-------------------[ PLANS ]-----------------//
 
 
 
 
-        /*-------- [ COMMERCIAL ROUTES ]---------*/
+
+
+/*--------------------------------------------------------[ COMMERCIAL ]----------------------------------------------------------------*/
 
         Route::group(['middleware' => 'auth'], function() {
 
             //Route::get('/dashboard',  [UsersController::class, 'index'])->name('pages.dashboard');
 
-            Route::get('/commercial/dashboard',  [CommercialController::class, 'index'])->name('commercial.dashboard');
+            Route::get('/commercial/dashboard',  [\App\Http\Controllers\Commercial\CommercialController::class, 'index'])->name('commercial.dashboard');
             Route::get('/dashboard/todo',  [TodoController::class, 'index'])->name('commercial.todo');
             Route::get('/dashboard/do',  [DoController::class, 'index'])->name('commercial.do');
             Route::get('/dashboard/tocall',  [TocallController::class, 'index'])->name('commercial.tocall');
             Route::get('/dashboard/lost',  [LostController::class, 'index'])->name('commercial.lost');
 
         });
-
-
 
 
 require __DIR__.'/auth.php';

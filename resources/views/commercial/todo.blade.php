@@ -1,6 +1,5 @@
-@extends('layouts.main')
-@section('content')
-    <div class="container">
+@include('partials.commercial.commercialheader')
+<div class="container">
         <x-app-layout>
             <x-slot name="header">
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -128,6 +127,8 @@
                                             </div>
                                         </div>
                                     </div>
+
+
                                 </div>
                             </div>
                         </div>
@@ -135,5 +136,4 @@
                 </div>
             </div>
         </x-app-layout>
-
-@endsection
+    </div>

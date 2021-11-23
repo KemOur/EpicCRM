@@ -1,23 +1,21 @@
-@extends('layouts.main')
-@section('content')
-    <div class="container">
-        <header>
-            @extends("layouts.navigation")
-        </header>
-        <div class="container">
-            <main>
-                    <h2 style="text-align: center; margin-top: 45px; font-size: 2.2rem; font-family: Roboto;">
+@include('partials.header')
+<div class="container">
+                <div class=" p-5 rounded mt-3" style="background-color: #4595ED">
+                    <h3 style="text-align: center; color: #ffffff">
                         Des fonctionnalités adaptées à vos besoins commerciaux.
-                    </h2>
-                <br>
+                    </h3>
+                    <p class="lead" style="color: #ffffff">
+                        Créez facilement des opportunités en se concentrent sur l'organisation de la donnée
+                    </p>
+                </div>
                 <br>
                 <div class="row featurette">
                     <div class="col-md-7">
                         <h2 class="my-4 h4">Rappels d'activités</h2>
-                        <p class="lead">
-                            Vous aurez un rappel d'activités chaque jour un mis à jour sera mis à votre disposition afin que vous puissiez suivre
-                            l'évolution de vos activités et jamais vous reprendre, vous pourrez donc prendre les étapes importantes pour que vous avanciez
-                            sur l'activité marquée sur la zone rappelle
+                        <p class="lead" style="font-size: 16px">
+                            Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à
+                            titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer
+                            le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
                         </p>
                     </div>
                     <div class="col-md-5">
@@ -27,7 +25,11 @@
                 <div class="row featurette">
                     <div class="col-md-7 order-md-2">
                         <h2 class="my-4 h4">Gestion des leads</h2>
-                        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+                        <p class="lead" style="font-size: 16px">
+                            Le lorem ipsum est, en imprimerie, une suite de mots sans signification
+                            utilisée à titre provisoire pour calibrer une mise en page, le texte définitif
+                            venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
+                        </p>
                     </div>
                     <div class="col-md-5 order-md-1">
                         <img src="{{asset('./imgs/gestion-leads.png')}}" alt="image logo" class="image_logo" style="width: 500px; height: 280px">
@@ -36,7 +38,11 @@
                 <div class="row featurette">
                     <div class="col-md-7">
                         <h2 class="my-4 h4">Rapports statistiques</h2>
-                        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+                        <p class="lead" style="font-size: 16px">
+                            Le lorem ipsum est, en imprimerie, une suite de mots sans signification
+                            utilisée à titre provisoire pour calibrer une mise en page, le texte définitif
+                            venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
+                        </p>
                     </div>
                     <div class="col-md-5">
                         <img src="{{asset('./imgs/1A.png')}}" alt="image logo" class="image_logo" style="width: 500px; height: 280px">
@@ -46,7 +52,10 @@
                 <div class="row featurette">
                     <div class="col-md-7 order-md-2">
                         <h2 class="my-4 h4">Notifications par email</h2>
-                        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+                        <p class="lead" style="font-size: 16px">
+                            Le lorem ipsum est, en imprimerie, une suite de mots sans signification
+                            utilisée à titre provisoire pour calibrer une mise en page, le texte définitif
+                            venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
                     </div>
                     <div class="col-md-5 order-md-1">
                         <img src="{{asset('./imgs/2A.png')}}" alt="image logo" class="image_logo" style="width: 500px; height: 280px">
@@ -56,7 +65,11 @@
                 <div class="row featurette">
                     <div class="col-md-7">
                         <h2 class="my-4 h4">Support client</h2>
-                        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+                        <p class="lead" style="font-size: 16px">
+                            Le lorem ipsum est, en imprimerie, une suite de mots sans signification
+                            utilisée à titre provisoire pour calibrer une mise en page, le texte définitif
+                            venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
+                        </p>
                     </div>
                     <div class="col-md-5">
                         <img src="{{asset('./imgs/Support-client.png')}}" alt="image logo" class="image_logo" style="width: 500px; height: 280px">
@@ -67,14 +80,15 @@
                 <div class="row featurette">
                     <div class="col-md-7 order-md-2">
                         <h2 class="my-4 h4">Trello</h2>
-                        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+                        <p class="lead" style="font-size: 16px">
+                            Le lorem ipsum est, en imprimerie, une suite de mots sans signification
+                            utilisée à titre provisoire pour calibrer une mise en page, le texte définitif
+                            venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
+                        </p>
                     </div>
                     <div class="col-md-5 order-md-1">
                         <img src="{{asset('./imgs/trello.png')}}" alt="image logo" class="image_logo" style="width: 500px; height: 280px">
                     </div>
                 </div>
-            </main>
         </div>
-    </div>
-    @include('partials.footer')
-@endsection
+@include('partials.footer')

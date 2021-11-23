@@ -25,7 +25,7 @@
 
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
             <symbol id="check" viewBox="0 0 16 16">
-                <title>Check</title>
+                <title>epicrm</title>
                 <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
             </symbol>
         </svg>
@@ -58,6 +58,17 @@
                 }
             }
 
+            @media (max-width: 375px){
+                .foncneed {
+                    font-size: 25px;
+                }
+            }
+
+            .foncneed {
+                text-align: center;font-size: 35px;
+            }
+
+
             /*body {
                 background-image: linear-gradient(180deg, #eee, #fff 100px, #fff);
             }*/
@@ -76,10 +87,9 @@
 </head>
 <body class="antialiased">
 
-<!--@include('partials.header')-->
+@include('partials.header')
 @yield('content')
 @yield('scripts')
-<!--@include('partials.footer')-->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -114,6 +124,6 @@
         });
     } );
 
-
 </script>
+@include('partials.footer')
 </body>

@@ -12,16 +12,19 @@ class DashboardController extends Controller
     public function index(Request $request)
     {
         //if ($request->user()->role_id == 3) {
-        if ($request->user()->role_id == 1) {
+        if ($request->user()->role_id === 1) {
             //$userList = User::get();
             return view('admin.dashboard');
-        } elseif($request->user()->role_id == 2){
-            return view('commercial.dashboard');
+        } else{
+            return 'ERROOR';
         }
+        //dd($request->user);
         //} elseif ($request->user()->role_id == 2) {
         //return redirect()->route('commercial.dashboard');
         //} elseif ($request->user()->role_id == 1) {
         //  return redirect()->route('admin.dashboard');
         //}
     }
+
+
 }

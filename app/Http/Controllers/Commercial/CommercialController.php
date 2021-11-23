@@ -1,25 +1,28 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Commercial;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CommercialController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
     {
-        //----Commercial dashboard-----///
-        if ($request->user()->role_id == 2) {
-            return view('commercial.dashboard');
-        }
-    }
-
+        //
+       if (auth::check() && Auth::user()->role_id == 2) {
+               return view('commercial.dashboard');
+           } else {
+           return "NOT A COMMERCIAL ";
+           }
+   }
 
     /**
      * Show the form for creating a new resource.
